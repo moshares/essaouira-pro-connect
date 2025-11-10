@@ -7,8 +7,10 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
 import { ArrowLeft, Upload } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { useTranslation } from "react-i18next";
 
 const RequestService = () => {
+  const { t } = useTranslation();
   const [searchParams] = useSearchParams();
   const serviceType = searchParams.get('type') || '';
   const navigate = useNavigate();
@@ -42,8 +44,8 @@ const RequestService = () => {
     
     if (!formData.name || !formData.phone || !formData.address) {
       toast({
-        title: "Missing Information",
-        description: "Please fill in all required fields.",
+        title: t('requestService.missingInfo'),
+        description: t('requestService.fillAllFields'),
         variant: "destructive"
       });
       return;
@@ -67,35 +69,34 @@ const RequestService = () => {
           className="mb-6"
         >
           <ArrowLeft className="mr-2 h-4 w-4" />
-          Back to Services
+          {t('requestService.backToServices')}
         </Button>
 
         <Card className="p-8 shadow-soft">
           <div className="mb-8">
             <h1 className="text-3xl md:text-4xl font-bold mb-2 text-card-foreground">
-              Request {serviceType} Service
+              {t('requestService.title', { serviceType })}
             </h1>
             <p className="text-muted-foreground">
-              Fill out the form below and we'll connect you with a professional
+              {t('requestService.subtitle')}
             </p>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <Label htmlFor="name" className="text-card-foreground">Full Name *</Label>
+              <Label htmlFor="name" className="text-card-foreground">{t('requestService.name')} {t('requestService.required')}</Label>
               <Input
                 id="name"
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                placeholder="Your full name"
                 required
                 className="mt-1"
               />
             </div>
 
             <div>
-              <Label htmlFor="phone" className="text-card-foreground">Phone Number *</Label>
+              <Label htmlFor="phone" className="text-card-foreground">{t('requestService.phone')} {t('requestService.required')}</Label>
               <Input
                 id="phone"
                 name="phone"
@@ -109,20 +110,19 @@ const RequestService = () => {
             </div>
 
             <div>
-              <Label htmlFor="address" className="text-card-foreground">Address *</Label>
+              <Label htmlFor="address" className="text-card-foreground">{t('requestService.address')} {t('requestService.required')}</Label>
               <Input
                 id="address"
                 name="address"
                 value={formData.address}
                 onChange={handleChange}
-                placeholder="Your address in Essaouira"
                 required
                 className="mt-1"
               />
             </div>
 
             <div>
-              <Label htmlFor="serviceType" className="text-card-foreground">Type of Service *</Label>
+              <Label htmlFor="serviceType" className="text-card-foreground">{t('requestService.serviceType')} {t('requestService.required')}</Label>
               <Input
                 id="serviceType"
                 name="serviceType"
@@ -135,14 +135,14 @@ const RequestService = () => {
 
             <div>
               <Label htmlFor="description" className="text-card-foreground">
-                Description of Problem
+                {t('requestService.description')}
               </Label>
               <Textarea
                 id="description"
                 name="description"
                 value={formData.description}
                 onChange={handleChange}
-                placeholder="Please describe what needs to be done..."
+                placeholder={t('requestService.descriptionPlaceholder')}
                 rows={4}
                 className="mt-1"
               />
@@ -150,14 +150,14 @@ const RequestService = () => {
 
             <div>
               <Label htmlFor="photo" className="text-card-foreground">
-                Upload Photo (Optional)
+                {t('requestService.uploadPhoto')}
               </Label>
               <div className="mt-1">
                 <label htmlFor="photo" className="cursor-pointer">
                   <div className="border-2 border-dashed border-border rounded-lg p-6 text-center hover:border-primary transition-colors">
                     <Upload className="h-8 w-8 mx-auto mb-2 text-muted-foreground" />
                     <p className="text-sm text-muted-foreground">
-                      {photoFile ? photoFile.name : "Click to upload a photo"}
+                      {photoFile ? photoFile.name : t('requestService.uploadPhotoPlaceholder')}
                     </p>
                   </div>
                   <input
@@ -176,7 +176,7 @@ const RequestService = () => {
               className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
               disabled={isSubmitting}
             >
-              {isSubmitting ? "Submitting..." : "Submit Request"}
+              {isSubmitting ? t('requestService.submitting') : t('requestService.submit')}
             </Button>
           </form>
         </Card>

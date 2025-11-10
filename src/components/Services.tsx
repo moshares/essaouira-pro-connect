@@ -1,53 +1,56 @@
-import { Wrench, Droplet, Paintbrush, Hammer, Lightbulb, Refrigerator } from "lucide-react";
+import { Wrench, Droplet, Paintbrush, Hammer, Lightbulb, Leaf } from "lucide-react";
 import ServiceCard from "./ServiceCard";
-
-const services = [
-  {
-    icon: Lightbulb,
-    title: "Electrician",
-    description: "Wiring, lighting, electrical repairs",
-    serviceType: "Electrician"
-  },
-  {
-    icon: Droplet,
-    title: "Plumber",
-    description: "Pipes, leaks, bathroom & kitchen fixes",
-    serviceType: "Plumber"
-  },
-  {
-    icon: Paintbrush,
-    title: "Painter",
-    description: "Interior & exterior painting services",
-    serviceType: "Painter"
-  },
-  {
-    icon: Hammer,
-    title: "Carpenter",
-    description: "Furniture, doors, custom woodwork",
-    serviceType: "Carpenter"
-  },
-  {
-    icon: Wrench,
-    title: "Handyman",
-    description: "General repairs & maintenance",
-    serviceType: "Handyman"
-  },
-  {
-    icon: Refrigerator,
-    title: "Appliance Repair",
-    description: "Washing machines, fridges, ovens",
-    serviceType: "Appliance Repair"
-  }
-];
+import { useTranslation } from "react-i18next";
 
 const Services = () => {
+  const { t } = useTranslation();
+  
+  const services = [
+    {
+      icon: Lightbulb,
+      titleKey: "services.electrician.title",
+      descriptionKey: "services.electrician.description",
+      serviceType: "Electrician"
+    },
+    {
+      icon: Droplet,
+      titleKey: "services.plumber.title",
+      descriptionKey: "services.plumber.description",
+      serviceType: "Plumber"
+    },
+    {
+      icon: Paintbrush,
+      titleKey: "services.painter.title",
+      descriptionKey: "services.painter.description",
+      serviceType: "Painter"
+    },
+    {
+      icon: Hammer,
+      titleKey: "services.carpenter.title",
+      descriptionKey: "services.carpenter.description",
+      serviceType: "Carpenter"
+    },
+    {
+      icon: Wrench,
+      titleKey: "services.handyman.title",
+      descriptionKey: "services.handyman.description",
+      serviceType: "Handyman"
+    },
+    {
+      icon: Leaf,
+      titleKey: "services.gardening.title",
+      descriptionKey: "services.gardening.description",
+      serviceType: "Gardening"
+    }
+  ];
+
   return (
     <section id="services" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">Our Services</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">{t('services.title')}</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Choose from our range of professional home services
+            {t('services.subtitle')}
           </p>
         </div>
         
@@ -56,8 +59,8 @@ const Services = () => {
             <ServiceCard
               key={index}
               icon={service.icon}
-              title={service.title}
-              description={service.description}
+              title={t(service.titleKey)}
+              description={t(service.descriptionKey)}
               serviceType={service.serviceType}
             />
           ))}

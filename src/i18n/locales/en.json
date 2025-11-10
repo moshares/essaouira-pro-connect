@@ -1,0 +1,120 @@
+{
+  "hero": {
+    "title": "Find Trusted Professionals in Essaouira",
+    "subtitle": "Electricians, Plumbers, Painters & More – Quick, Reliable Service at Your Doorstep",
+    "browseServices": "Browse Services",
+    "callNow": "Call Us Now"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Choose from our range of professional home services",
+    "electrician": {
+      "title": "Electrician",
+      "description": "Wiring, lighting, electrical repairs"
+    },
+    "plumber": {
+      "title": "Plumber",
+      "description": "Pipes, leaks, bathroom & kitchen fixes"
+    },
+    "painter": {
+      "title": "Painter",
+      "description": "Interior & exterior painting services"
+    },
+    "carpenter": {
+      "title": "Carpenter",
+      "description": "Furniture, doors, custom woodwork"
+    },
+    "handyman": {
+      "title": "Handyman",
+      "description": "General repairs & maintenance"
+    },
+    "gardening": {
+      "title": "Gardening",
+      "description": "Garden maintenance, landscaping, pruning"
+    }
+  },
+  "serviceArea": {
+    "title": "Service Coverage",
+    "subtitle": "Proudly serving Essaouira and surrounding areas",
+    "locations": {
+      "essaouira": "Essaouira",
+      "diabat": "Diabat",
+      "ghazoua": "Ghazoua",
+      "sidiKaouki": "Sidi Kaouki",
+      "nearby": "Nearby Regions"
+    }
+  },
+  "testimonials": {
+    "title": "What Our Customers Say",
+    "subtitle": "Trusted by hundreds of satisfied customers in Essaouira",
+    "reviews": [
+      {
+        "name": "Ahmed K.",
+        "location": "Essaouira",
+        "text": "Quick response and professional work. The electrician fixed my problem the same day!"
+      },
+      {
+        "name": "Sarah M.",
+        "location": "Diabat",
+        "text": "Excellent plumbing service. Very reliable and fair prices. Highly recommend!"
+      },
+      {
+        "name": "Mohamed B.",
+        "location": "Sidi Kaouki",
+        "text": "The painter did an amazing job on our villa. Clean work and friendly service."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know about our services",
+    "questions": [
+      {
+        "question": "How quickly can you send someone?",
+        "answer": "Most of our professionals can respond within 2-4 hours for urgent requests, and same-day service is often available."
+      },
+      {
+        "question": "What areas do you cover?",
+        "answer": "We serve Essaouira, Diabat, Ghazoua, Sidi Kaouki, and surrounding regions. Contact us to confirm service availability in your area."
+      },
+      {
+        "question": "How much do your services cost?",
+        "answer": "Pricing varies by service type and complexity. After submitting your request, we'll provide a free estimate before any work begins."
+      },
+      {
+        "question": "Are your professionals vetted and insured?",
+        "answer": "Yes, all our service providers are carefully vetted, experienced professionals. Insurance coverage varies by service provider."
+      },
+      {
+        "question": "How do I request a service?",
+        "answer": "Simply select the service you need, fill out the quick request form with your details, and we'll connect you with the right professional."
+      }
+    ]
+  },
+  "requestService": {
+    "backToServices": "Back to Services",
+    "title": "Request {{serviceType}} Service",
+    "subtitle": "Fill out the form below and we'll connect you with a professional",
+    "name": "Full Name",
+    "phone": "Phone Number",
+    "address": "Address",
+    "serviceType": "Type of Service",
+    "description": "Description of Problem",
+    "descriptionPlaceholder": "Please describe what needs to be done...",
+    "uploadPhoto": "Upload Photo (Optional)",
+    "uploadPhotoPlaceholder": "Click to upload a photo",
+    "submit": "Submit Request",
+    "submitting": "Submitting...",
+    "required": "*",
+    "missingInfo": "Missing Information",
+    "fillAllFields": "Please fill in all required fields."
+  },
+  "confirmation": {
+    "title": "Request Received!",
+    "message": "Thank you for your request. A professional will contact you shortly to confirm the details and schedule a visit.",
+    "responseTime": "We typically respond within 1-2 hours during business hours.",
+    "backHome": "Back to Home",
+    "callDirectly": "Call Us Directly",
+    "urgentNote": "Need urgent assistance? Contact us on WhatsApp or call us directly."
+  }
+}

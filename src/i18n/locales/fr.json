@@ -1,0 +1,120 @@
+{
+  "hero": {
+    "title": "Trouvez des Professionnels de Confiance à Essaouira",
+    "subtitle": "Électriciens, Plombiers, Peintres et Plus – Service Rapide et Fiable à Votre Porte",
+    "browseServices": "Parcourir les Services",
+    "callNow": "Appelez-nous"
+  },
+  "services": {
+    "title": "Nos Services",
+    "subtitle": "Choisissez parmi notre gamme de services professionnels pour la maison",
+    "electrician": {
+      "title": "Électricien",
+      "description": "Câblage, éclairage, réparations électriques"
+    },
+    "plumber": {
+      "title": "Plombier",
+      "description": "Tuyaux, fuites, réparations salle de bain et cuisine"
+    },
+    "painter": {
+      "title": "Peintre",
+      "description": "Services de peinture intérieure et extérieure"
+    },
+    "carpenter": {
+      "title": "Menuisier",
+      "description": "Meubles, portes, travaux sur bois sur mesure"
+    },
+    "handyman": {
+      "title": "Homme à Tout Faire",
+      "description": "Réparations générales et maintenance"
+    },
+    "gardening": {
+      "title": "Jardinage",
+      "description": "Entretien de jardin, aménagement paysager, taille"
+    }
+  },
+  "serviceArea": {
+    "title": "Zone de Couverture",
+    "subtitle": "Fièrement au service d'Essaouira et des environs",
+    "locations": {
+      "essaouira": "Essaouira",
+      "diabat": "Diabat",
+      "ghazoua": "Ghazoua",
+      "sidiKaouki": "Sidi Kaouki",
+      "nearby": "Régions Avoisinantes"
+    }
+  },
+  "testimonials": {
+    "title": "Ce Que Disent Nos Clients",
+    "subtitle": "La confiance de centaines de clients satisfaits à Essaouira",
+    "reviews": [
+      {
+        "name": "Ahmed K.",
+        "location": "Essaouira",
+        "text": "Réponse rapide et travail professionnel. L'électricien a résolu mon problème le jour même !"
+      },
+      {
+        "name": "Sarah M.",
+        "location": "Diabat",
+        "text": "Excellent service de plomberie. Très fiable et prix justes. Je recommande vivement !"
+      },
+      {
+        "name": "Mohamed B.",
+        "location": "Sidi Kaouki",
+        "text": "Le peintre a fait un travail extraordinaire sur notre villa. Travail propre et service amical."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Questions Fréquemment Posées",
+    "subtitle": "Tout ce que vous devez savoir sur nos services",
+    "questions": [
+      {
+        "question": "Dans combien de temps pouvez-vous envoyer quelqu'un ?",
+        "answer": "La plupart de nos professionnels peuvent répondre dans les 2 à 4 heures pour les demandes urgentes, et un service le jour même est souvent disponible."
+      },
+      {
+        "question": "Quelles zones couvrez-vous ?",
+        "answer": "Nous desservons Essaouira, Diabat, Ghazoua, Sidi Kaouki et les régions environnantes. Contactez-nous pour confirmer la disponibilité du service dans votre région."
+      },
+      {
+        "question": "Combien coûtent vos services ?",
+        "answer": "Les prix varient selon le type de service et la complexité. Après avoir soumis votre demande, nous vous fournirons un devis gratuit avant tout travail."
+      },
+      {
+        "question": "Vos professionnels sont-ils vérifiés et assurés ?",
+        "answer": "Oui, tous nos prestataires de services sont soigneusement vérifiés et sont des professionnels expérimentés. La couverture d'assurance varie selon le prestataire."
+      },
+      {
+        "question": "Comment demander un service ?",
+        "answer": "Sélectionnez simplement le service dont vous avez besoin, remplissez le formulaire de demande rapide avec vos détails, et nous vous mettrons en contact avec le bon professionnel."
+      }
+    ]
+  },
+  "requestService": {
+    "backToServices": "Retour aux Services",
+    "title": "Demande de Service {{serviceType}}",
+    "subtitle": "Remplissez le formulaire ci-dessous et nous vous mettrons en contact avec un professionnel",
+    "name": "Nom Complet",
+    "phone": "Numéro de Téléphone",
+    "address": "Adresse",
+    "serviceType": "Type de Service",
+    "description": "Description du Problème",
+    "descriptionPlaceholder": "Veuillez décrire ce qui doit être fait...",
+    "uploadPhoto": "Télécharger une Photo (Optionnel)",
+    "uploadPhotoPlaceholder": "Cliquez pour télécharger une photo",
+    "submit": "Soumettre la Demande",
+    "submitting": "Envoi en cours...",
+    "required": "*",
+    "missingInfo": "Informations Manquantes",
+    "fillAllFields": "Veuillez remplir tous les champs obligatoires."
+  },
+  "confirmation": {
+    "title": "Demande Reçue !",
+    "message": "Merci pour votre demande. Un professionnel vous contactera sous peu pour confirmer les détails et planifier une visite.",
+    "responseTime": "Nous répondons généralement dans les 1 à 2 heures pendant les heures ouvrables.",
+    "backHome": "Retour à l'Accueil",
+    "callDirectly": "Appelez-nous Directement",
+    "urgentNote": "Besoin d'une assistance urgente ? Contactez-nous sur WhatsApp ou appelez-nous directement."
+  }
+}
