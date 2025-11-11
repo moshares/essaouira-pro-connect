@@ -1,4 +1,8 @@
 {
+  "nav": {
+    "blog": "Blog",
+    "home": "Accueil"
+  },
   "hero": {
     "title": "Trouvez des Professionnels de Confiance à Essaouira",
     "subtitle": "Électriciens, Plombiers, Peintres et Plus – Service Rapide et Fiable à Votre Porte",
@@ -8,29 +12,101 @@
   "services": {
     "title": "Nos Services",
     "subtitle": "Choisissez parmi notre gamme de services professionnels pour la maison",
+    "backHome": "Retour à l'Accueil",
+    "whatWeOffer": "Ce Que Nous Offrons",
+    "included": "Ce Qui Est Inclus",
+    "whyChoose": "Pourquoi Nous Choisir",
+    "whyChoose1": "Tous nos professionnels sont expérimentés, vérifiés et approuvés par la communauté d'Essaouira.",
+    "whyChoose2": "Nous offrons des temps de réponse rapides, des prix transparents et un travail de qualité garanti.",
+    "whyChoose3": "Au service d'Essaouira, Diabat, Ghazoua, Sidi Kaouki et des zones côtières environnantes.",
+    "readyToStart": "Prêt à Commencer ?",
+    "contactUs": "Contactez-nous dès aujourd'hui pour un devis gratuit et un service rapide",
+    "getQuote": "Obtenir un Devis Gratuit",
+    "callNow": "Appelez Maintenant",
+    "requestNow": "Demander ce Service",
     "electrician": {
       "title": "Électricien",
-      "description": "Câblage, éclairage, réparations électriques"
+      "description": "Câblage, éclairage, réparations électriques",
+      "detailTitle": "Services d'Électricien Professionnel à Essaouira",
+      "detailSubtitle": "Réparations, installations et maintenance électriques expertes",
+      "detailDescription": "Nos électriciens certifiés à Essaouira fournissent des services électriques complets incluant le câblage, l'installation d'éclairage, les réparations de circuits, les mises à niveau de panneaux et les réparations électriques d'urgence.",
+      "features": {
+        "0": "Services complets de câblage et recâblage électrique",
+        "1": "Installation et réparation d'éclairage intérieur et extérieur",
+        "2": "Mise à niveau de panneaux électriques et réparation de disjoncteurs",
+        "3": "Inspections de sécurité et diagnostic de pannes",
+        "4": "Réparations électriques d'urgence disponibles 24h/24"
+      }
     },
     "plumber": {
       "title": "Plombier",
-      "description": "Tuyaux, fuites, réparations salle de bain et cuisine"
+      "description": "Tuyaux, fuites, réparations salle de bain et cuisine",
+      "detailTitle": "Services de Plomberie Expert à Essaouira",
+      "detailSubtitle": "Réparations, installations et maintenance de plomberie professionnelles",
+      "detailDescription": "Plombiers professionnels à Essaouira spécialisés dans les réparations de fuites, l'installation de tuyaux, la plomberie de salle de bain et cuisine, les services de chauffe-eau et la plomberie d'urgence.",
+      "features": {
+        "0": "Services de détection et réparation de fuites",
+        "1": "Installation de plomberie de salle de bain et cuisine",
+        "2": "Installation et réparation de chauffe-eau",
+        "3": "Nettoyage de drains et débouchage de tuyaux",
+        "4": "Services de plomberie d'urgence disponibles"
+      }
     },
     "painter": {
       "title": "Peintre",
-      "description": "Services de peinture intérieure et extérieure"
+      "description": "Services de peinture intérieure et extérieure",
+      "detailTitle": "Services de Peinture Professionnels à Essaouira",
+      "detailSubtitle": "Peinture intérieure et extérieure pour maisons et propriétés commerciales",
+      "detailDescription": "Peintres experts à Essaouira fournissant des services de peinture intérieure et extérieure. Spécialisés dans la peinture de maisons côtières avec des peintures résistantes à l'humidité.",
+      "features": {
+        "0": "Peinture de murs et plafonds intérieurs",
+        "1": "Peinture de façade extérieure avec peintures résistantes aux intempéries",
+        "2": "Finitions spéciales et peinture décorative",
+        "3": "Consultation couleur et conseils en design",
+        "4": "Préparation de surface et protection des propriétés côtières"
+      }
     },
     "carpenter": {
       "title": "Menuisier",
-      "description": "Meubles, portes, travaux sur bois sur mesure"
+      "description": "Meubles, portes, travaux sur bois sur mesure",
+      "detailTitle": "Services de Menuiserie Professionnels à Essaouira",
+      "detailSubtitle": "Meubles sur mesure, portes et travaux en bois",
+      "detailDescription": "Menuisiers qualifiés à Essaouira offrant fabrication de meubles sur mesure, installation et réparation de portes, armoires de cuisine et tous types de travaux en bois.",
+      "features": {
+        "0": "Conception et construction de meubles sur mesure",
+        "1": "Installation et réparation de cadres de portes et fenêtres",
+        "2": "Installation d'armoires de cuisine et salle de bain",
+        "3": "Armoires encastrées et solutions de rangement",
+        "4": "Restauration et finition de bois"
+      }
     },
     "handyman": {
       "title": "Homme à Tout Faire",
-      "description": "Réparations générales et maintenance"
+      "description": "Réparations générales et maintenance",
+      "detailTitle": "Services d'Homme à Tout Faire Fiables à Essaouira",
+      "detailSubtitle": "Réparations et maintenance générales pour tous vos besoins",
+      "detailDescription": "Services professionnels d'homme à tout faire à Essaouira pour tous types de réparations et maintenance domestiques.",
+      "features": {
+        "0": "Assemblage et installation de meubles",
+        "1": "Réparations murales, rebouchage et retouches de peinture",
+        "2": "Installation d'accessoires (étagères, tringles à rideaux, miroirs)",
+        "3": "Ajustements et réparations de portes et fenêtres",
+        "4": "Maintenance générale de la maison et petits travaux"
+      }
     },
     "gardening": {
       "title": "Jardinage",
-      "description": "Entretien de jardin, aménagement paysager, taille"
+      "description": "Entretien de jardin, aménagement paysager, taille",
+      "detailTitle": "Services de Jardinage Professionnels à Essaouira",
+      "detailSubtitle": "Entretien de jardin, aménagement paysager et embellissement extérieur",
+      "detailDescription": "Services de jardinage experts à Essaouira incluant entretien de jardin, conception paysagère, taille d'arbres et arbustes, systèmes d'irrigation et soin de pelouse.",
+      "features": {
+        "0": "Entretien régulier de jardin et tonte de pelouse",
+        "1": "Conception et installation d'aménagement paysager",
+        "2": "Taille et élagage d'arbres et arbustes",
+        "3": "Installation et réparation de systèmes d'irrigation",
+        "4": "Soin de jardins côtiers et plantations résistantes à la sécheresse"
+      }
     }
   },
   "serviceArea": {
@@ -43,6 +119,10 @@
       "sidiKaouki": "Sidi Kaouki",
       "nearby": "Régions Avoisinantes"
     }
+  },
+  "location": {
+    "title": "Trouvez-nous à Essaouira",
+    "subtitle": "Au service d'Essaouira et de toutes les zones côtières environnantes"
   },
   "testimonials": {
     "title": "Ce Que Disent Nos Clients",
@@ -78,18 +158,61 @@
         "answer": "Nous desservons Essaouira, Diabat, Ghazoua, Sidi Kaouki et les régions environnantes. Contactez-nous pour confirmer la disponibilité du service dans votre région."
       },
       {
-        "question": "Combien coûtent vos services ?",
-        "answer": "Les prix varient selon le type de service et la complexité. Après avoir soumis votre demande, nous vous fournirons un devis gratuit avant tout travail."
+        "question": "Combien coûte un plombier à Essaouira ?",
+        "answer": "Les tarifs de plomberie à Essaouira varient généralement de 150 à 400 MAD par heure selon la complexité du travail. Nous fournissons des devis gratuits avant de commencer."
+      },
+      {
+        "question": "Combien facture un électricien à Essaouira ?",
+        "answer": "Les services d'électricien à Essaouira coûtent généralement entre 200 et 500 MAD selon le type de réparation ou d'installation. Contactez-nous pour un devis détaillé."
+      },
+      {
+        "question": "Offrez-vous des services d'urgence ?",
+        "answer": "Oui, nous offrons des services d'urgence pour les problèmes urgents de plomberie et d'électricité. Contactez-nous à tout moment, et nous enverrons un professionnel aussi rapidement que possible."
       },
       {
         "question": "Vos professionnels sont-ils vérifiés et assurés ?",
         "answer": "Oui, tous nos prestataires de services sont soigneusement vérifiés et sont des professionnels expérimentés. La couverture d'assurance varie selon le prestataire."
       },
       {
+        "question": "Quels modes de paiement acceptez-vous ?",
+        "answer": "Nous acceptons l'espèces et les virements bancaires. Le paiement est généralement dû à la fin du service."
+      },
+      {
         "question": "Comment demander un service ?",
-        "answer": "Sélectionnez simplement le service dont vous avez besoin, remplissez le formulaire de demande rapide avec vos détails, et nous vous mettrons en contact avec le bon professionnel."
+        "answer": "Sélectionnez simplement le service dont vous avez besoin, remplissez le formulaire de demande rapide avec vos détails, et nous vous mettrons en contact avec le bon professionnel en quelques heures."
       }
     ]
+  },
+  "blog": {
+    "title": "Blog Entretien Maison",
+    "subtitle": "Conseils, guides et astuces pour propriétaires à Essaouira",
+    "backHome": "Retour à l'Accueil",
+    "backToBlog": "Retour au Blog",
+    "readMore": "Lire Plus",
+    "minRead": "min de lecture",
+    "requestService": "Demander un Service",
+    "posts": {
+      "repairs": {
+        "title": "Top 5 des Réparations à Ne Pas Ignorer à Essaouira",
+        "excerpt": "Vivre dans le climat côtier d'Essaouira signifie que certaines réparations nécessitent une attention immédiate.",
+        "content": "Le magnifique emplacement côtier d'Essaouira présente des défis uniques pour les propriétaires. La combinaison d'air salin, d'humidité et de tempêtes occasionnelles peut accélérer l'usure de votre propriété. Voici les 5 principales réparations que vous ne devriez jamais ignorer:\n\n1. Fuites d'eau et problèmes de plomberie: Dans le climat humide d'Essaouira, même de petites fuites peuvent rapidement conduire à la croissance de moisissures et à des dommages structurels.\n\n2. Problèmes électriques: Les lumières qui clignotent, les disjoncteurs qui sautent fréquemment ou les odeurs de brûlé provenant des prises sont de graves dangers pour la sécurité.\n\n3. Dommages au toit: Les vents côtiers forts et les pluies occasionnelles peuvent endommager les tuiles du toit et les solins.\n\n4. Détérioration de la peinture extérieure: L'air salin à Essaouira est particulièrement dur pour la peinture extérieure.\n\n5. Pourriture du bois et dommages causés par les termites: L'humidité crée des conditions idéales pour la pourriture du bois et les termites.\n\nNe attendez pas que de petits problèmes deviennent de grandes dépenses. Contactez Essaouira Home Services pour des réparations professionnelles."
+      },
+      "electrician": {
+        "title": "Comment Choisir le Bon Électricien à Essaouira",
+        "excerpt": "Trouver un électricien qualifié est crucial pour la sécurité de votre maison.",
+        "content": "Le travail électrique n'est pas quelque chose à prendre à la légère. Que vous ayez besoin d'une simple réparation ou d'un recâblage complet, choisir le bon électricien à Essaouira est essentiel.\n\nVérifiez les qualifications et l'expérience, consultez les références et les avis, assurez-vous qu'ils comprennent les défis électriques côtiers, obtenez des devis écrits détaillés, renseignez-vous sur les services d'urgence, vérifiez la couverture d'assurance, recherchez une communication claire et considérez le temps de réponse.\n\nContactez Essaouira Home Services pour des services électriques professionnels et fiables dans toute la région."
+      },
+      "humidity": {
+        "title": "Pourquoi l'Humidité Affecte la Peinture des Maisons Côtières",
+        "excerpt": "La vie côtière à Essaouira est belle, mais l'humidité peut ravager votre peinture.",
+        "content": "Si vous possédez une maison à Essaouira ou dans les zones côtières environnantes, vous avez probablement remarqué que la peinture ne dure pas aussi longtemps qu'à l'intérieur des terres.\n\nLa proximité de l'océan Atlantique signifie que votre maison est constamment exposée à l'humidité chargée de sel. Choisissez des peintures résistantes à l'humidité, effectuez une préparation de surface appropriée, utilisez des apprêts de qualité, envisagez des revêtements spécialisés et maintenez une ventilation appropriée.\n\nNos peintres professionnels à Essaouira utilisent des peintures de qualité côtière premium."
+      },
+      "plumbing": {
+        "title": "Conseils de Plomberie pour Propriétés Côtières au Maroc",
+        "excerpt": "Les propriétés côtières font face à des défis de plomberie uniques.",
+        "content": "Posséder une propriété le long de la côte atlantique du Maroc offre des vues à couper le souffle, mais présente également des défis spécifiques pour votre système de plomberie.\n\nComprenez les risques de corrosion, gérez l'eau dure, entretenez votre chauffe-eau, prévenez les fuites avant qu'elles ne commencent, protégez la plomberie extérieure, choisissez les bons matériaux, maintenez un drainage approprié, planifiez un entretien régulier et soyez préparé aux urgences.\n\nContactez-nous dès aujourd'hui pour une inspection de plomberie ou pour répondre à toute préoccupation concernant votre système."
+      }
+    }
   },
   "requestService": {
     "backToServices": "Retour aux Services",

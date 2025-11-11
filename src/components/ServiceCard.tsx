@@ -15,7 +15,7 @@ const ServiceCard = ({ icon: Icon, title, description, serviceType }: ServiceCar
   return (
     <Card 
       className="group p-6 hover:shadow-soft transition-all duration-300 cursor-pointer border-2 hover:border-primary bg-card"
-      onClick={() => navigate(`/request-service?type=${encodeURIComponent(serviceType)}`)}
+      onClick={() => navigate(`/services/${serviceType.toLowerCase()}`)}
     >
       <div className="flex flex-col items-center text-center space-y-4">
         <div className="w-16 h-16 rounded-full bg-ocean-light flex items-center justify-center group-hover:scale-110 transition-transform duration-300">

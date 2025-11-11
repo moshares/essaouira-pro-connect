@@ -12,3 +12,8 @@ Allow: /
 
 User-agent: *
 Allow: /
+Sitemap: https://yourdomain.com/sitemap.xml
+
+# SEO-optimized for Essaouira Home Services
+# Prioritize service and blog pages
+Crawl-delay: 1

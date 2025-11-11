@@ -1,10 +1,12 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, BookOpen } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 import LanguageSwitcher from "./LanguageSwitcher";
 
 const Hero = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   
   const scrollToServices = () => {
     document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
@@ -14,7 +16,15 @@ const Hero = () => {
     <section className="relative min-h-[90vh] flex items-center justify-center bg-gradient-hero overflow-hidden">
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNiIgc3Ryb2tlPSJyZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMSkiLz48L2c+PC9zdmc+')] opacity-20"></div>
       
-      <div className="absolute top-6 right-6 z-20">
+      <div className="absolute top-6 right-6 z-20 flex items-center gap-4">
+        <Button
+          variant="ghost"
+          onClick={() => navigate("/blog")}
+          className="text-primary-foreground hover:bg-white/10 hidden md:flex"
+        >
+          <BookOpen className="mr-2 h-4 w-4" />
+          {t('nav.blog')}
+        </Button>
         <LanguageSwitcher />
       </div>
       

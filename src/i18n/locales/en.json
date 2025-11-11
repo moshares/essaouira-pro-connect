@@ -1,4 +1,8 @@
 {
+  "nav": {
+    "blog": "Blog",
+    "home": "Home"
+  },
   "hero": {
     "title": "Find Trusted Professionals in Essaouira",
     "subtitle": "Electricians, Plumbers, Painters & More – Quick, Reliable Service at Your Doorstep",
@@ -8,29 +12,101 @@
   "services": {
     "title": "Our Services",
     "subtitle": "Choose from our range of professional home services",
+    "backHome": "Back to Home",
+    "whatWeOffer": "What We Offer",
+    "included": "What's Included",
+    "whyChoose": "Why Choose Us",
+    "whyChoose1": "All our professionals are experienced, vetted, and trusted by the Essaouira community.",
+    "whyChoose2": "We offer fast response times, transparent pricing, and quality workmanship guaranteed.",
+    "whyChoose3": "Serving Essaouira, Diabat, Ghazoua, Sidi Kaouki, and surrounding coastal areas.",
+    "readyToStart": "Ready to Get Started?",
+    "contactUs": "Contact us today for a free quote and fast service",
+    "getQuote": "Get Free Quote",
+    "callNow": "Call Now",
+    "requestNow": "Request This Service",
     "electrician": {
       "title": "Electrician",
-      "description": "Wiring, lighting, electrical repairs"
+      "description": "Wiring, lighting, electrical repairs",
+      "detailTitle": "Professional Electrician Services in Essaouira",
+      "detailSubtitle": "Expert electrical repairs, installations, and maintenance for homes and businesses",
+      "detailDescription": "Our certified electricians in Essaouira provide comprehensive electrical services including wiring, lighting installation, circuit repairs, panel upgrades, and emergency electrical repairs. Serving Essaouira, Diabat, Ghazoua, and Sidi Kaouki with fast, reliable service.",
+      "features": {
+        "0": "Complete electrical wiring and rewiring services",
+        "1": "Indoor and outdoor lighting installation and repair",
+        "2": "Electrical panel upgrades and circuit breaker repairs",
+        "3": "Safety inspections and fault diagnosis",
+        "4": "Emergency electrical repairs available 24/7"
+      }
     },
     "plumber": {
       "title": "Plumber",
-      "description": "Pipes, leaks, bathroom & kitchen fixes"
+      "description": "Pipes, leaks, bathroom & kitchen fixes",
+      "detailTitle": "Expert Plumber Services in Essaouira",
+      "detailSubtitle": "Professional plumbing repairs, installations, and maintenance",
+      "detailDescription": "Professional plumbers in Essaouira specializing in leak repairs, pipe installation, bathroom and kitchen plumbing, water heater services, and emergency plumbing. Fast response times for all plumbing needs in Essaouira and nearby coastal areas.",
+      "features": {
+        "0": "Leak detection and repair services",
+        "1": "Bathroom and kitchen plumbing installation",
+        "2": "Water heater installation and repair",
+        "3": "Drain cleaning and pipe unclogging",
+        "4": "Emergency plumbing services available"
+      }
     },
     "painter": {
       "title": "Painter",
-      "description": "Interior & exterior painting services"
+      "description": "Interior & exterior painting services",
+      "detailTitle": "Professional Painting Services in Essaouira",
+      "detailSubtitle": "Interior and exterior painting for homes and commercial properties",
+      "detailDescription": "Expert painters in Essaouira providing interior and exterior painting services. Specializing in coastal home painting with humidity-resistant paints, color consultation, and professional finishes for villas, riads, and commercial properties.",
+      "features": {
+        "0": "Interior wall and ceiling painting",
+        "1": "Exterior facade painting with weather-resistant paints",
+        "2": "Specialty finishes and decorative painting",
+        "3": "Color consultation and design advice",
+        "4": "Surface preparation and protection of coastal properties"
+      }
     },
     "carpenter": {
       "title": "Carpenter",
-      "description": "Furniture, doors, custom woodwork"
+      "description": "Furniture, doors, custom woodwork",
+      "detailTitle": "Professional Carpentry Services in Essaouira",
+      "detailSubtitle": "Custom furniture, doors, and woodwork for your home",
+      "detailDescription": "Skilled carpenters in Essaouira offering custom furniture making, door installation and repair, kitchen cabinets, built-in storage, and all types of woodwork. Quality craftsmanship for residential and commercial projects.",
+      "features": {
+        "0": "Custom furniture design and construction",
+        "1": "Door and window frame installation and repair",
+        "2": "Kitchen and bathroom cabinet installation",
+        "3": "Built-in wardrobes and storage solutions",
+        "4": "Wood restoration and refinishing"
+      }
     },
     "handyman": {
       "title": "Handyman",
-      "description": "General repairs & maintenance"
+      "description": "General repairs & maintenance",
+      "detailTitle": "Reliable Handyman Services in Essaouira",
+      "detailSubtitle": "General home repairs and maintenance for all your needs",
+      "detailDescription": "Professional handyman services in Essaouira for all types of home repairs and maintenance. From minor fixes to larger projects, our experienced handymen can handle furniture assembly, wall repairs, fixture installation, and much more.",
+      "features": {
+        "0": "Furniture assembly and installation",
+        "1": "Wall repairs, patching, and painting touch-ups",
+        "2": "Fixture installation (shelves, curtain rods, mirrors)",
+        "3": "Door and window adjustments and repairs",
+        "4": "General home maintenance and odd jobs"
+      }
     },
     "gardening": {
       "title": "Gardening",
-      "description": "Garden maintenance, landscaping, pruning"
+      "description": "Garden maintenance, landscaping, pruning",
+      "detailTitle": "Professional Gardening Services in Essaouira",
+      "detailSubtitle": "Garden maintenance, landscaping, and outdoor beautification",
+      "detailDescription": "Expert gardening services in Essaouira including garden maintenance, landscaping design, tree and shrub pruning, irrigation systems, and lawn care. Specialized in coastal garden care and drought-resistant plantings.",
+      "features": {
+        "0": "Regular garden maintenance and lawn mowing",
+        "1": "Landscaping design and installation",
+        "2": "Tree and shrub pruning and trimming",
+        "3": "Irrigation system installation and repair",
+        "4": "Coastal garden care and drought-resistant planting"
+      }
     }
   },
   "serviceArea": {
@@ -43,6 +119,10 @@
       "sidiKaouki": "Sidi Kaouki",
       "nearby": "Nearby Regions"
     }
+  },
+  "location": {
+    "title": "Find Us in Essaouira",
+    "subtitle": "Serving Essaouira and all surrounding coastal areas"
   },
   "testimonials": {
     "title": "What Our Customers Say",
@@ -78,18 +158,61 @@
         "answer": "We serve Essaouira, Diabat, Ghazoua, Sidi Kaouki, and surrounding regions. Contact us to confirm service availability in your area."
       },
       {
-        "question": "How much do your services cost?",
-        "answer": "Pricing varies by service type and complexity. After submitting your request, we'll provide a free estimate before any work begins."
+        "question": "How much does a plumber cost in Essaouira?",
+        "answer": "Plumber rates in Essaouira typically range from 150-400 MAD per hour depending on the complexity of the job. We provide free estimates before starting any work."
+      },
+      {
+        "question": "How much does an electrician charge in Essaouira?",
+        "answer": "Electrician services in Essaouira typically cost between 200-500 MAD depending on the type of repair or installation. Contact us for a detailed quote."
+      },
+      {
+        "question": "Do you offer emergency services?",
+        "answer": "Yes, we offer emergency services for urgent plumbing and electrical issues. Contact us anytime, and we'll dispatch a professional as quickly as possible."
       },
       {
         "question": "Are your professionals vetted and insured?",
         "answer": "Yes, all our service providers are carefully vetted, experienced professionals. Insurance coverage varies by service provider."
       },
       {
+        "question": "What payment methods do you accept?",
+        "answer": "We accept cash and bank transfers. Payment is typically due upon completion of the service."
+      },
+      {
         "question": "How do I request a service?",
-        "answer": "Simply select the service you need, fill out the quick request form with your details, and we'll connect you with the right professional."
+        "answer": "Simply select the service you need, fill out the quick request form with your details, and we'll connect you with the right professional within hours."
       }
     ]
+  },
+  "blog": {
+    "title": "Home Maintenance Blog",
+    "subtitle": "Tips, guides, and advice for homeowners in Essaouira",
+    "backHome": "Back to Home",
+    "backToBlog": "Back to Blog",
+    "readMore": "Read More",
+    "minRead": "min read",
+    "requestService": "Request a Service",
+    "posts": {
+      "repairs": {
+        "title": "Top 5 Home Repairs You Shouldn't Ignore in Essaouira",
+        "excerpt": "Living in Essaouira's coastal climate means certain home repairs need immediate attention. Learn which issues to prioritize.",
+        "content": "Essaouira's beautiful coastal location comes with unique challenges for homeowners. The combination of salt air, humidity, and occasional storms can accelerate wear and tear on your property. Here are the top 5 home repairs you should never ignore:\n\n1. Water Leaks and Plumbing Issues: In Essaouira's humid climate, even small leaks can quickly lead to mold growth and structural damage. Address any dripping faucets, pipe leaks, or water stains immediately. Our professional plumbers in Essaouira can diagnose and fix these issues before they become costly problems.\n\n2. Electrical Problems: Flickering lights, frequently tripping breakers, or burning smells from outlets are serious safety hazards. Coastal humidity can corrode electrical connections faster than in dry climates. Have a qualified electrician in Essaouira inspect your electrical system regularly.\n\n3. Roof Damage: Strong coastal winds and occasional heavy rains can damage roof tiles and flashing. Regular inspections can prevent water infiltration that leads to interior damage. Look for missing tiles, cracks, or water stains on ceilings.\n\n4. Exterior Paint Deterioration: The salt air in Essaouira is particularly harsh on exterior paint. Peeling or cracked paint isn't just cosmetic—it exposes your walls to moisture damage. Professional painters can apply weather-resistant coatings specifically designed for coastal homes.\n\n5. Wood Rot and Termite Damage: Humidity creates ideal conditions for wood rot and termites. Check wooden doors, windows, and furniture regularly. Our carpenters in Essaouira can repair or replace damaged woodwork before the problem spreads.\n\nDon't wait until small problems become major expenses. Contact Essaouira Home Services for professional repairs and preventive maintenance. We serve Essaouira, Diabat, Ghazoua, Sidi Kaouki, and all surrounding areas with fast, reliable service."
+      },
+      "electrician": {
+        "title": "How to Choose the Right Electrician in Essaouira",
+        "excerpt": "Finding a qualified electrician is crucial for your home's safety. Here's what to look for when hiring electrical services in Essaouira.",
+        "content": "Electrical work is not something to take lightly. Whether you need a simple repair or a complete rewiring, choosing the right electrician in Essaouira is essential for your family's safety and your home's value. Here's a comprehensive guide to help you make the right choice.\n\nVerify Qualifications and Experience: Always ask about certifications and training. A qualified electrician should have proper licensing and years of hands-on experience. In Morocco, look for electricians with recognized vocational training or certifications from reputable institutions.\n\nCheck References and Reviews: Ask for references from previous customers in Essaouira and surrounding areas. Online reviews can also provide valuable insights into the electrician's reliability, professionalism, and quality of work. Our electricians at Essaouira Home Services have served hundreds of satisfied customers throughout the region.\n\nEnsure They Understand Coastal Electrical Challenges: Essaouira's coastal environment presents unique electrical challenges. Salt air can corrode connections, and humidity can affect electrical components. Choose an electrician familiar with these issues and who uses appropriate materials for coastal installations.\n\nGet Detailed Written Estimates: Before any work begins, request a detailed written estimate that includes labor, materials, and any potential additional costs. Transparent pricing protects you from surprise charges and helps you budget appropriately.\n\nAsk About Emergency Services: Electrical emergencies don't wait for business hours. Find an electrician who offers emergency services. We provide 24/7 emergency electrical repairs throughout Essaouira, Diabat, Ghazoua, and Sidi Kaouki.\n\nVerify Insurance Coverage: Professional electricians should carry liability insurance to protect you and your property in case of accidents or damage during the work.\n\nLook for Clear Communication: A good electrician explains the problem, the proposed solution, and the reasoning behind their recommendations in terms you can understand. They should be patient with your questions and concerns.\n\nConsider Response Time: In urgent situations, how quickly can they respond? We pride ourselves on responding to most requests within 2-4 hours in the Essaouira area.\n\nChoosing the right electrician doesn't have to be complicated. Contact Essaouira Home Services for professional, reliable electrical services throughout the region. Our experienced team is ready to help with all your electrical needs."
+      },
+      "humidity": {
+        "title": "Why Humidity Affects Paint in Coastal Homes (and How to Fix It)",
+        "excerpt": "Coastal living in Essaouira is beautiful, but humidity can wreak havoc on your paint. Learn how to protect your walls.",
+        "content": "If you own a home in Essaouira or the surrounding coastal areas, you've probably noticed that paint doesn't last as long as it does inland. The combination of salt air, moisture, and temperature fluctuations creates unique challenges for maintaining your home's interior and exterior surfaces. Understanding these issues and how to address them can save you time, money, and frustration.\n\nWhy Coastal Humidity Damages Paint: Essaouira's proximity to the Atlantic Ocean means your home is constantly exposed to salt-laden moisture. This humidity penetrates paint layers, causing several problems: peeling, bubbling, mold growth, color fading, and chalking (that powdery residue that rubs off on your hands).\n\nInterior Paint Challenges: Inside your home, humidity from cooking, showering, and the general coastal air can cause paint to deteriorate faster, especially in bathrooms, kitchens, and poorly ventilated rooms. Look for signs like bubbling paint, mold or mildew spots, musty odors, and peeling at corners and edges.\n\nExterior Paint Problems: Your home's exterior faces even harsher conditions. The salt air is particularly corrosive, and direct sun exposure combined with moisture accelerates paint breakdown. Common issues include cracking and flaking, discoloration, mold and algae growth, and erosion of the paint's protective coating.\n\nSolutions for Coastal Homes: Choose Moisture-Resistant Paints—Modern paints specifically formulated for high-humidity environments contain mold inhibitors and are designed to resist moisture penetration. Our professional painters in Essaouira use premium coastal-grade paints. Proper Surface Preparation—The key to long-lasting paint is thorough preparation: removing all old, loose paint; treating any mold or mildew; repairing cracks and damage; applying appropriate primers. Use Quality Primers—A high-quality primer creates a moisture barrier between your walls and the topcoat. For coastal homes, use primers specifically designed for high-humidity environments. Consider Specialized Coatings—For exteriors, specialized coatings offer enhanced protection: elastomeric coatings that flex with temperature changes, anti-corrosive primers for metal surfaces, and waterproof sealants for particularly exposed areas. Maintain Proper Ventilation—Good airflow helps control indoor humidity: install exhaust fans in bathrooms and kitchens; open windows regularly to allow air circulation; consider a dehumidifier in particularly damp areas.\n\nWhen to Repaint: In coastal areas like Essaouira, exterior paint typically needs refreshing every 3-5 years, while interior paint in high-humidity areas may need attention every 5-7 years. However, don't wait for severe deterioration—regular maintenance is more cost-effective than major repairs.\n\nProfessional Painting Services in Essaouira: While DIY painting is possible, professional painters bring expertise in coastal conditions, access to commercial-grade materials, proper surface preparation techniques, and efficient, long-lasting results. Our team at Essaouira Home Services specializes in coastal home painting throughout Essaouira, Diabat, Ghazoua, and Sidi Kaouki.\n\nProtecting your coastal home from humidity-related paint damage requires the right materials, techniques, and regular maintenance. Contact us today for a free consultation and quote. Our experienced painters will help you choose the best solutions for your specific situation."
+      },
+      "plumbing": {
+        "title": "Plumbing Tips for Coastal Properties in Morocco",
+        "excerpt": "Coastal properties face unique plumbing challenges. Here's how to maintain your plumbing system in Essaouira's environment.",
+        "content": "Owning property along Morocco's Atlantic coast offers breathtaking views and a unique lifestyle, but it also presents specific challenges for your plumbing system. The combination of salt air, mineral-rich water, and coastal climate conditions can accelerate wear and tear on pipes, fixtures, and appliances. Here's what every coastal property owner in Essaouira should know.\n\nUnderstand Corrosion Risks: Salt air is highly corrosive to metal pipes and fixtures. Even indoor plumbing is affected as salt-laden air circulates through your home. Copper pipes can develop pinhole leaks, galvanized steel pipes corrode from the inside out, and fixtures and faucets show signs of corrosion faster. Regular inspections by a professional plumber in Essaouira can catch these issues early.\n\nDeal with Hard Water: Many areas around Essaouira have hard water with high mineral content. Over time, minerals build up inside pipes, reducing water pressure and efficiency. They also damage water heaters and appliances, leave unsightly stains on fixtures, and make cleaning more difficult. Consider installing a water softener and descale fixtures regularly.\n\nMaintain Your Water Heater: Coastal conditions are particularly tough on water heaters. Sediment buildup from hard water accumulates faster, and salt air accelerates tank corrosion. To extend your water heater's life: flush the tank annually to remove sediment, check the anode rod every 2-3 years, insulate the tank and pipes to improve efficiency, and consider a tankless system for coastal homes.\n\nPrevent Leaks Before They Start: In humid coastal environments, even small leaks can quickly lead to mold, mildew, and structural damage. Inspect visible pipes regularly for signs of corrosion or moisture, check under sinks and around toilets, monitor your water bill for unexplained increases, and install leak detectors in vulnerable areas.\n\nProtect Outdoor Plumbing: If you have outdoor showers, garden irrigation, or pool plumbing, these systems face direct exposure to salt air and weather. Use corrosion-resistant materials like PVC, stainless steel, or brass; winterize outdoor plumbing if you're away during cooler months; regularly clean and maintain outdoor fixtures; consider protective coatings for exposed metal components.\n\nChoose the Right Materials: When replacing or upgrading plumbing, material selection is crucial for coastal homes: PVC and CPVC pipes resist corrosion well, PEX tubing is flexible and corrosion-resistant, stainless steel fixtures last longer than chrome, and brass fittings outperform other metals in coastal environments. Our plumbers in Essaouira can recommend the best materials for your specific situation.\n\nMaintain Proper Drainage: Coastal properties often deal with higher humidity and occasional heavy rains. Ensure your drainage systems work efficiently: keep gutters and downspouts clear, maintain proper grading around your property, install French drains if needed, and regularly check floor drains for blockages.\n\nSchedule Regular Maintenance: Preventive maintenance is especially important for coastal properties. An annual plumbing inspection can identify potential problems before they become emergencies: checking for corrosion and leaks, testing water pressure, inspecting water heater condition, and cleaning aerators and showerheads.\n\nEmergency Preparedness: Know where your main water shutoff is located, keep a reliable plumber's contact information handy, understand which plumbing issues require immediate attention, and consider having emergency supplies like pipe tape and a plunger.\n\nWhen to Call a Professional: While some maintenance tasks are DIY-friendly, coastal properties often need professional expertise for persistent leaks or water pressure issues, water heater problems, pipe replacements or upgrades, and major fixture installations. At Essaouira Home Services, our experienced plumbers understand the unique challenges of coastal plumbing. We serve Essaouira, Diabat, Ghazoua, Sidi Kaouki, and surrounding areas with fast, reliable service.\n\nDon't wait for a plumbing emergency. Regular maintenance and timely repairs will save you money and protect your coastal property investment. Contact us today for a plumbing inspection or to address any concerns you have about your system."
+      }
+    }
   },
   "requestService": {
     "backToServices": "Back to Services",
