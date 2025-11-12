@@ -119,7 +119,7 @@ const ServiceDetail = () => {
                   variant="outline"
                   asChild
                 >
-                  <a href="tel:+212123456789">{t('services.callNow')}</a>
+                  <a href="tel:+212652659003">{t('services.callNow')}</a>
                 </Button>
               </div>
             </div>

@@ -40,7 +40,7 @@ const Confirmation = () => {
             variant="outline"
             asChild
           >
-            <a href="tel:+212123456789">
+            <a href="tel:+212652659003">
               <Phone className="mr-2 h-5 w-5" />
               {t('confirmation.callDirectly')}
             </a>

@@ -1,3 +1,8 @@
+import homeRepairsImage from "@/assets/blog/home-repairs-essaouira.jpg";
+import electricianImage from "@/assets/blog/electrician-essaouira.jpg";
+import humidityImage from "@/assets/blog/humidity-paint-coastal.jpg";
+import plumbingImage from "@/assets/blog/plumbing-coastal-properties.jpg";
+
 export interface BlogPost {
   id: string;
   slug: string;
@@ -21,7 +26,8 @@ export const blogPosts: BlogPost[] = [
     author: "Essaouira Home Services",
     publishedDate: "2024-01-15",
     category: "Home Maintenance",
-    readTime: 5
+    readTime: 5,
+    image: homeRepairsImage
   },
   {
     id: "2",
@@ -32,7 +38,8 @@ export const blogPosts: BlogPost[] = [
     author: "Essaouira Home Services",
     publishedDate: "2024-01-20",
     category: "Professional Services",
-    readTime: 6
+    readTime: 6,
+    image: electricianImage
   },
   {
     id: "3",
@@ -43,7 +50,8 @@ export const blogPosts: BlogPost[] = [
     author: "Essaouira Home Services",
     publishedDate: "2024-01-25",
     category: "Coastal Living",
-    readTime: 7
+    readTime: 7,
+    image: humidityImage
   },
   {
     id: "4",
@@ -54,6 +62,7 @@ export const blogPosts: BlogPost[] = [
     author: "Essaouira Home Services",
     publishedDate: "2024-02-01",
     category: "Home Maintenance",
-    readTime: 6
+    readTime: 6,
+    image: plumbingImage
   }
 ];

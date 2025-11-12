@@ -20,7 +20,7 @@ const SchemaMarkup = ({ title, description, type = "website", article }: SchemaM
     "name": "Essaouira Home Services",
     "description": "Professional home repair and maintenance services in Essaouira, Morocco. Electricians, plumbers, painters, carpenters, handymen, and gardening services.",
     "url": window.location.origin,
-    "telephone": "+212123456789",
+    "telephone": "+212652659003",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Essaouira",

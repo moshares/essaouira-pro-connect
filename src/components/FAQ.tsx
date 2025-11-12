@@ -20,7 +20,7 @@ const FAQ = () => {
         </div>
         
         <Accordion type="single" collapsible className="max-w-3xl mx-auto bg-card rounded-lg shadow-card p-6">
-          {[0, 1, 2, 3, 4, 5, 6, 7].map((index) => (
+          {[0, 1, 2, 3, 4, 5].map((index) => (
             <AccordionItem key={index} value={`item-${index}`}>
               <AccordionTrigger className="text-left font-semibold text-card-foreground hover:text-primary">
                 {t(`faq.questions.${index}.question`)}
