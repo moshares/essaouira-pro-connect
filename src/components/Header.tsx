@@ -36,12 +36,12 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4">
-        <div className="flex h-20 items-center justify-between">
-          <Link to="/" className="flex items-center gap-2">
-            <img src={logo} alt="Essaouira Home Services" className="h-16 w-auto" />
+        <div className="flex h-24 items-center justify-center">
+          <Link to="/" className="absolute left-4 flex items-center gap-2">
+            <img src={logo} alt="Essaouira Home Services" className="h-20 w-auto" />
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation - Centered */}
           <nav className="hidden lg:flex items-center gap-6">
             {navigation.map((item) => (
               <button
@@ -52,11 +52,14 @@ const Header = () => {
                 {item.name}
               </button>
             ))}
+          </nav>
+
+          <div className="absolute right-4 hidden lg:flex items-center gap-2">
             <LanguageSwitcher />
-            <Button asChild size="default" className="ml-2">
+            <Button asChild size="default">
               <a href="tel:+212652659003">{t('hero.callNow')}</a>
             </Button>
-          </nav>
+          </div>
 
           {/* Mobile Navigation */}
           <div className="flex lg:hidden items-center gap-2">
