@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -8,40 +8,58 @@ import logo from "@/assets/logo.svg";
 
 const Header = () => {
   const { t } = useTranslation();
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const scrollToSection = (sectionId: string) => {
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        element?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    } else {
+      const element = document.getElementById(sectionId);
+      element?.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   const navigation = [
-    { name: t('nav.home'), href: "/" },
-    { name: t('services.title'), href: "/#services" },
-    { name: t('nav.blog'), href: "/blog" },
+    { name: t('nav.home'), action: () => navigate('/') },
+    { name: t('services.title'), action: () => scrollToSection('services') },
+    { name: t('serviceArea.title'), action: () => scrollToSection('areas') },
+    { name: t('testimonials.title'), action: () => scrollToSection('testimonials') },
+    { name: t('faq.title'), action: () => scrollToSection('faq') },
+    { name: t('nav.blog'), action: () => navigate('/blog') },
   ];
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4">
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-20 items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
-            <img src={logo} alt="Essaouira Home Services" className="h-10 w-auto" />
+            <img src={logo} alt="Essaouira Home Services" className="h-16 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-6">
+          <nav className="hidden lg:flex items-center gap-6">
             {navigation.map((item) => (
-              <Link
+              <button
                 key={item.name}
-                to={item.href}
-                className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
+                onClick={item.action}
+                className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors cursor-pointer"
               >
                 {item.name}
-              </Link>
+              </button>
             ))}
             <LanguageSwitcher />
-            <Button asChild size="sm">
+            <Button asChild size="default" className="ml-2">
               <a href="tel:+212652659003">{t('hero.callNow')}</a>
             </Button>
           </nav>
 
           {/* Mobile Navigation */}
-          <div className="flex md:hidden items-center gap-2">
+          <div className="flex lg:hidden items-center gap-2">
             <LanguageSwitcher />
             <Sheet>
               <SheetTrigger asChild>
@@ -52,13 +70,17 @@ const Header = () => {
               <SheetContent side="right">
                 <nav className="flex flex-col gap-4 mt-8">
                   {navigation.map((item) => (
-                    <Link
+                    <button
                       key={item.name}
-                      to={item.href}
-                      className="text-lg font-medium text-foreground hover:text-primary transition-colors"
+                      onClick={() => {
+                        item.action();
+                        // Close sheet after navigation
+                        document.querySelector('[data-state="open"]')?.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape' }));
+                      }}
+                      className="text-lg font-medium text-foreground hover:text-primary transition-colors text-left"
                     >
                       {item.name}
-                    </Link>
+                    </button>
                   ))}
                   <Button asChild className="mt-4">
                     <a href="tel:+212652659003">{t('hero.callNow')}</a>

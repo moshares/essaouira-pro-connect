@@ -13,7 +13,7 @@ const ServiceArea = () => {
   ];
 
   return (
-    <section className="py-20 bg-sand-light">
+    <section id="areas" className="py-20 bg-sand-light">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <MapPin className="h-12 w-12 text-primary mx-auto mb-4" />
