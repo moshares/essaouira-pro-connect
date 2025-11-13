@@ -107,6 +107,20 @@
         "3": "Installation et réparation de systèmes d'irrigation",
         "4": "Soin de jardins côtiers et plantations résistantes à la sécheresse"
       }
+    },
+    "builder": {
+      "title": "Maçon",
+      "description": "Construction, rénovations, travaux de maçonnerie",
+      "detailTitle": "Services de Maçonnerie Professionnels à Essaouira",
+      "detailSubtitle": "Construction, rénovations et maçonnerie pour projets résidentiels et commerciaux",
+      "detailDescription": "Maçons expérimentés à Essaouira fournissant des services de construction incluant nouvelles constructions, rénovations de maisons, extensions, travaux de maçonnerie et réparations structurelles.",
+      "features": {
+        "0": "Nouvelle construction et construction de maisons",
+        "1": "Rénovations de maisons et extensions",
+        "2": "Travaux de maçonnerie et pose de briques",
+        "3": "Réparations structurelles et renforcement",
+        "4": "Travaux de béton et services de fondation"
+      }
     }
   },
   "serviceArea": {
