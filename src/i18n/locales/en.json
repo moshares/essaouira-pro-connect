@@ -107,6 +107,20 @@
         "3": "Irrigation system installation and repair",
         "4": "Coastal garden care and drought-resistant planting"
       }
+    },
+    "builder": {
+      "title": "Builder",
+      "description": "Construction, renovations, masonry work",
+      "detailTitle": "Professional Builder Services in Essaouira",
+      "detailSubtitle": "Construction, renovations, and masonry for residential and commercial projects",
+      "detailDescription": "Experienced builders in Essaouira providing construction services including new builds, home renovations, extensions, masonry work, and structural repairs. Quality craftsmanship for all types of building projects in Essaouira and coastal areas.",
+      "features": {
+        "0": "New construction and home building",
+        "1": "Home renovations and extensions",
+        "2": "Masonry work and brick laying",
+        "3": "Structural repairs and reinforcement",
+        "4": "Concrete work and foundation services"
+      }
     }
   },
   "serviceArea": {
