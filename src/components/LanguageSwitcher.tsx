@@ -29,9 +29,9 @@ const LanguageSwitcher = () => {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button 
-          variant="ghost" 
+          variant="outline" 
           size="sm" 
-          className="gap-2 bg-white/10 hover:bg-white/20 text-primary-foreground border border-primary-foreground/20 backdrop-blur-sm"
+          className="gap-2 bg-background border-border hover:bg-accent hover:text-accent-foreground"
         >
           <Globe className="h-4 w-4" />
           <span>{currentLanguage.flag} {currentLanguage.code.toUpperCase()}</span>

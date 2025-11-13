@@ -50,7 +50,15 @@ const Blog = () => {
                   className="overflow-hidden hover:shadow-lg transition-shadow cursor-pointer group"
                   onClick={() => navigate(`/blog/${post.slug}`)}
                 >
-                  <div className="aspect-video bg-gradient-hero"></div>
+                  {post.image && (
+                    <div className="aspect-video overflow-hidden">
+                      <img 
+                        src={post.image} 
+                        alt={t(post.titleKey)}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                  )}
                   <div className="p-6">
                     <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
                       <div className="flex items-center gap-1">

@@ -36,8 +36,8 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4">
-        <div className="flex h-24 items-center justify-center">
-          <Link to="/" className="absolute left-4 flex items-center gap-2">
+        <div className="flex h-24 items-center justify-center relative">
+          <Link to="/" className="absolute left-4 rtl:left-auto rtl:right-4 flex items-center gap-2">
             <img src={logo} alt="Essaouira Home Services" className="h-20 w-auto" />
           </Link>
 
@@ -54,7 +54,7 @@ const Header = () => {
             ))}
           </nav>
 
-          <div className="absolute right-4 hidden lg:flex items-center gap-2">
+          <div className="absolute right-4 rtl:right-auto rtl:left-4 hidden lg:flex items-center gap-2">
             <LanguageSwitcher />
             <Button asChild size="default">
               <a href="tel:+212652659003">{t('hero.callNow')}</a>
