@@ -38,7 +38,7 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex h-20 lg:h-24 items-center justify-between lg:justify-center relative">
           <Link to="/" className="lg:absolute left-4 rtl:left-auto rtl:right-4 flex items-center gap-2">
-            <img src={logo} alt="Essaouira Home Services" className="h-12 lg:h-20 w-auto" />
+            <img src={logo} alt="Essaouira Home Services" className="h-16 lg:h-24 w-auto" />
           </Link>
 
           {/* Desktop Navigation - Centered */}
