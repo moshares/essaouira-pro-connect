@@ -36,9 +36,9 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4">
-        <div className="flex h-24 items-center justify-center relative">
-          <Link to="/" className="absolute left-4 rtl:left-auto rtl:right-4 flex items-center gap-2">
-            <img src={logo} alt="Essaouira Home Services" className="h-20 w-auto" />
+        <div className="flex h-20 lg:h-24 items-center justify-between lg:justify-center relative">
+          <Link to="/" className="lg:absolute left-4 rtl:left-auto rtl:right-4 flex items-center gap-2">
+            <img src={logo} alt="Essaouira Home Services" className="h-12 lg:h-20 w-auto" />
           </Link>
 
           {/* Desktop Navigation - Centered */}
@@ -62,7 +62,7 @@ const Header = () => {
           </div>
 
           {/* Mobile Navigation */}
-          <div className="flex lg:hidden items-center gap-2">
+          <div className="flex lg:hidden items-center gap-2 rtl:flex-row-reverse">
             <LanguageSwitcher />
             <Sheet>
               <SheetTrigger asChild>
