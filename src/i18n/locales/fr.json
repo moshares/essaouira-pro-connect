@@ -121,6 +121,34 @@
         "3": "Réparations structurelles et renforcement",
         "4": "Travaux de béton et services de fondation"
       }
+    },
+    "welder": {
+      "title": "Soudeur",
+      "description": "Fabrication métallique, soudure, travaux d'acier",
+      "detailTitle": "Services de Soudure Professionnels à Essaouira",
+      "detailSubtitle": "Fabrication métallique, soudure et travaux d'acier pour tous projets",
+      "detailDescription": "Soudeurs experts à Essaouira offrant des services professionnels de soudure et fabrication métallique incluant portails, garde-corps, structures en acier, réparations et travaux métalliques sur mesure.",
+      "features": {
+        "0": "Fabrication et installation de portails et garde-corps",
+        "1": "Soudure de structures en acier et réparations",
+        "2": "Travaux métalliques sur mesure et fabrication",
+        "3": "Travaux en fer forgé et métal décoratif",
+        "4": "Réparations de soudure d'urgence et maintenance"
+      }
+    },
+    "pool": {
+      "title": "Services de Piscine",
+      "description": "Nettoyage, entretien, réparations de piscine",
+      "detailTitle": "Services de Piscine Professionnels à Essaouira",
+      "detailSubtitle": "Nettoyage, entretien et réparation de piscines",
+      "detailDescription": "Techniciens professionnels de piscine à Essaouira offrant entretien complet, nettoyage, équilibrage chimique, réparations d'équipement et services d'installation pour piscines résidentielles et commerciales.",
+      "features": {
+        "0": "Nettoyage et entretien régulier de piscine",
+        "1": "Test chimique et équilibrage de l'eau",
+        "2": "Réparation et remplacement d'équipement de piscine",
+        "3": "Entretien de pompes et filtres de piscine",
+        "4": "Services d'ouverture et fermeture de piscine"
+      }
     }
   },
   "serviceArea": {

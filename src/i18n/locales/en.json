@@ -121,6 +121,34 @@
         "3": "Structural repairs and reinforcement",
         "4": "Concrete work and foundation services"
       }
+    },
+    "welder": {
+      "title": "Welder",
+      "description": "Metal fabrication, welding, steel work",
+      "detailTitle": "Professional Welding Services in Essaouira",
+      "detailSubtitle": "Metal fabrication, welding, and steel work for all projects",
+      "detailDescription": "Expert welders in Essaouira providing professional welding and metal fabrication services including gates, railings, steel structures, repairs, and custom metalwork for residential and commercial properties.",
+      "features": {
+        "0": "Metal gate and railing fabrication and installation",
+        "1": "Steel structure welding and repairs",
+        "2": "Custom metalwork and fabrication",
+        "3": "Wrought iron work and decorative metal",
+        "4": "Emergency welding repairs and maintenance"
+      }
+    },
+    "pool": {
+      "title": "Pool Services",
+      "description": "Pool cleaning, maintenance, repairs",
+      "detailTitle": "Professional Pool Services in Essaouira",
+      "detailSubtitle": "Pool cleaning, maintenance, and repair services",
+      "detailDescription": "Professional pool service technicians in Essaouira offering complete pool maintenance, cleaning, chemical balancing, equipment repairs, and installation services for residential and commercial pools.",
+      "features": {
+        "0": "Regular pool cleaning and maintenance",
+        "1": "Chemical testing and water balancing",
+        "2": "Pool equipment repair and replacement",
+        "3": "Pool pump and filter maintenance",
+        "4": "Pool opening and closing services"
+      }
     }
   },
   "serviceArea": {

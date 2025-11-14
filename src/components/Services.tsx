@@ -1,4 +1,4 @@
-import { Wrench, Droplet, Paintbrush, Hammer, Lightbulb, Leaf, HardHat } from "lucide-react";
+import { Wrench, Droplet, Paintbrush, Hammer, Lightbulb, Leaf, HardHat, Flame, Waves } from "lucide-react";
 import ServiceCard from "./ServiceCard";
 import { useTranslation } from "react-i18next";
 
@@ -47,6 +47,18 @@ const Services = () => {
       titleKey: "services.builder.title",
       descriptionKey: "services.builder.description",
       serviceType: "Builder"
+    },
+    {
+      icon: Flame,
+      titleKey: "services.welder.title",
+      descriptionKey: "services.welder.description",
+      serviceType: "Welder"
+    },
+    {
+      icon: Waves,
+      titleKey: "services.pool.title",
+      descriptionKey: "services.pool.description",
+      serviceType: "Pool"
     }
   ];
 
