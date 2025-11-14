@@ -68,7 +68,13 @@ const BlogPost = () => {
               </div>
             </div>
 
-            <div className="aspect-video bg-gradient-hero rounded-lg mb-8"></div>
+            {post.image && (
+              <img 
+                src={post.image} 
+                alt={t(post.titleKey)}
+                className="aspect-video w-full object-cover rounded-lg mb-8"
+              />
+            )}
 
             <div className="prose prose-lg max-w-none text-foreground">
               {t(post.contentKey).split('\n\n').map((paragraph, index) => (
