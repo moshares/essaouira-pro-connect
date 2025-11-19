@@ -6,18 +6,16 @@
  * 
  * EmailJS credentials are hardcoded for compatibility with both Lovable.dev
  * and local Cursor development environments.
+ * 
+ * IMPORTANT FOR PRODUCTION:
+ * - Ensure your production domain is whitelisted in EmailJS dashboard
+ * - Go to EmailJS Dashboard > Settings > Authorized Domains
+ * - Add your Netlify domain (e.g., https://yourdomain.netlify.app)
  */
 
 import emailjs from '@emailjs/browser';
 import type { EmailJSParams } from './emailjs';
-
-/**
- * EmailJS Configuration
- * Hardcoded for compatibility with local development
- */
-const EMAILJS_PUBLIC_KEY = "9C9GJ2KpivqW5UtEs";
-const EMAILJS_SERVICE_ID = "service_7ahywr7";
-const EMAILJS_TEMPLATE_ID = "template_9oeegni";
+import { emailConfig } from './emailConfig';
 
 /**
  * Form data interface for service requests
@@ -91,7 +89,8 @@ const uploadPhotoToImgBB = async (file: File): Promise<string> => {
     });
 
     if (!response.ok) {
-      throw new Error(`ImgBB upload failed: ${response.statusText}`);
+      const errorText = await response.text().catch(() => 'Unknown error');
+      throw new Error(`ImgBB upload failed: ${response.status} ${response.statusText} - ${errorText}`);
     }
 
     const data: ImgBBResponse = await response.json();
@@ -131,6 +130,7 @@ export const requestService = async (formData: ServiceRequestFormData): Promise<
   if (formData.photo) {
     try {
       photoUrl = await uploadPhotoToImgBB(formData.photo);
+      console.log('Photo uploaded successfully:', photoUrl);
     } catch (photoError) {
       // Log error but continue with submission using "No photo"
       console.error('Photo upload error:', photoError);
@@ -139,32 +139,100 @@ export const requestService = async (formData: ServiceRequestFormData): Promise<
     }
   }
 
-  // Prepare EmailJS payload
+  // Validate required fields
+  if (!formData.full_name || !formData.phone || !formData.address) {
+    throw new Error('Missing required fields: full_name, phone, and address are required');
+  }
+
+  // Prepare EmailJS payload - ensure all fields are strings and not undefined
   const emailPayload: EmailJSParams = {
-    full_name: formData.full_name,
-    phone: formData.phone,
-    address: formData.address,
-    service_type: formData.service_type,
-    description: formData.description || "No description provided",
-    photo: photoUrl
+    full_name: String(formData.full_name || '').trim(),
+    phone: String(formData.phone || '').trim(),
+    address: String(formData.address || '').trim(),
+    service_type: String(formData.service_type || 'General').trim(),
+    description: String(formData.description || 'No description provided').trim(),
+    photo: String(photoUrl || 'No photo')
   };
 
+  // Validate payload fields are not empty (except description which can be default)
+  if (!emailPayload.full_name || !emailPayload.phone || !emailPayload.address) {
+    throw new Error('Invalid form data: required fields cannot be empty');
+  }
+
+  // Log payload for debugging (without sensitive data)
+  console.log('Sending EmailJS request:', {
+    serviceId: emailConfig.serviceId,
+    templateId: emailConfig.templateId,
+    hasPublicKey: !!emailConfig.publicKey,
+    payloadFields: Object.keys(emailPayload),
+    currentDomain: window.location.origin
+  });
+
   try {
-    // Send email via EmailJS with hardcoded credentials
+    // Initialize EmailJS with public key (required for proper initialization)
+    emailjs.init(emailConfig.publicKey);
+
+    // Send email via EmailJS
+    // Using the 4-parameter version: send(serviceId, templateId, params, publicKey)
     const response = await emailjs.send(
-      EMAILJS_SERVICE_ID,
-      EMAILJS_TEMPLATE_ID,
+      emailConfig.serviceId,
+      emailConfig.templateId,
       emailPayload,
-      EMAILJS_PUBLIC_KEY
+      emailConfig.publicKey
     );
 
-    if (response.status !== 200) {
-      throw new Error(`EmailJS returned status ${response.status}`);
+    // EmailJS v4.x returns response with status property
+    // Status 200 indicates success, but we should also check for other success indicators
+    console.log('EmailJS response:', {
+      status: response.status,
+      text: response.text,
+      statusText: response.statusText
+    });
+
+    // Accept status 200 as success (EmailJS standard success code)
+    // Some versions might return 0 or other codes, so we check for both
+    if (response.status !== 200 && response.status !== 0) {
+      throw new Error(`EmailJS returned status ${response.status}: ${response.text || response.statusText || 'Unknown error'}`);
     }
+
+    // Additional validation: check if response.text indicates success
+    if (response.text && response.text.toLowerCase().includes('error')) {
+      throw new Error(`EmailJS error response: ${response.text}`);
+    }
+
+    console.log('EmailJS email sent successfully');
   } catch (error) {
+    // Enhanced error logging for production debugging
+    console.error('EmailJS send error details:', {
+      error,
+      errorType: error instanceof Error ? error.constructor.name : typeof error,
+      errorMessage: error instanceof Error ? error.message : String(error),
+      serviceId: emailConfig.serviceId,
+      templateId: emailConfig.templateId,
+      currentDomain: window.location.origin,
+      userAgent: navigator.userAgent
+    });
+
+    // Provide more specific error messages
     if (error instanceof Error) {
+      // Check for common EmailJS errors
+      const errorMessage = error.message.toLowerCase();
+      
+      if (errorMessage.includes('domain') || errorMessage.includes('origin')) {
+        throw new Error('Domain not authorized. Please add your domain to EmailJS authorized domains in the dashboard.');
+      }
+      
+      if (errorMessage.includes('service') || errorMessage.includes('template')) {
+        throw new Error(`EmailJS configuration error: ${error.message}. Please verify service and template IDs.`);
+      }
+      
+      if (errorMessage.includes('network') || errorMessage.includes('fetch') || errorMessage.includes('cors')) {
+        throw new Error(`Network error: ${error.message}. Please check your internet connection and try again.`);
+      }
+      
       throw new Error(`Failed to send email: ${error.message}`);
     }
-    throw new Error('Failed to send email: Unknown error');
+    
+    throw new Error('Failed to send email: Unknown error occurred');
   }
 };
