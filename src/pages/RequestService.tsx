@@ -8,8 +8,7 @@ import { Card } from "@/components/ui/card";
 import { ArrowLeft, Upload } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useTranslation } from "react-i18next";
-import { uploadImageToImgBB } from "@/lib/imgbb";
-import { sendEmailViaEmailJS, type EmailJSParams } from "@/lib/emailjs";
+import { requestService, type ServiceRequestFormData } from "@/lib/serviceRequest";
 
 const RequestService = () => {
   const { t } = useTranslation();
@@ -43,9 +42,9 @@ const RequestService = () => {
   };
 
   /**
-   * Handles form submission with EmailJS integration
-   * - Uploads photo to ImgBB if provided
-   * - Sends email via EmailJS
+   * Handles form submission using the requestService function
+   * - Validates required fields
+   * - Calls requestService with form data
    * - Shows success/error messages
    * - Clears form on success
    */
@@ -65,35 +64,18 @@ const RequestService = () => {
     setIsSubmitting(true);
 
     try {
-      let photoUrl = "No photo";
-
-      // Upload photo to ImgBB if provided
-      if (photoFile) {
-        try {
-          photoUrl = await uploadImageToImgBB(photoFile);
-        } catch (photoError) {
-          console.error('Photo upload error:', photoError);
-          toast({
-            title: t('requestService.photoUploadError') || "Photo Upload Failed",
-            description: photoError instanceof Error ? photoError.message : "Failed to upload photo. Continuing without photo...",
-            variant: "destructive"
-          });
-          // Continue with submission even if photo upload fails
-        }
-      }
-
-      // Prepare EmailJS parameters
-      const emailParams: EmailJSParams = {
+      // Prepare form data for service request
+      const serviceRequestData: ServiceRequestFormData = {
         full_name: formData.name,
         phone: formData.phone,
         address: formData.address,
         service_type: formData.serviceType || "General",
-        description: formData.description || "No description provided",
-        photo: photoUrl
+        description: formData.description || "",
+        photo: photoFile
       };
 
-      // Send email via EmailJS
-      await sendEmailViaEmailJS(emailParams);
+      // Submit service request (handles photo upload and email sending)
+      await requestService(serviceRequestData);
 
       // Show success message
       toast({

@@ -13,12 +13,12 @@ This project uses EmailJS for handling service request form submissions and ImgB
 
    ```env
    # EmailJS Configuration
-   VITE_EMAILJS_PUBLIC=9C9GJ2KpivqW5UtEs
-   VITE_EMAILJS_SERVICE=service_7ahywr7
-   VITE_EMAILJS_TEMPLATE=template_9oeegni
+   PUBLIC_EMAILJS_PUBLIC=9C9GJ2KpivqW5UtEs
+   PUBLIC_EMAILJS_SERVICE=service_7ahywr7
+   PUBLIC_EMAILJS_TEMPLATE=template_9oeegni
 
    # ImgBB API Key (get from https://api.imgbb.com/)
-   VITE_IMGBB_KEY=your_imgbb_api_key_here
+   PUBLIC_IMGBB_KEY=your_imgbb_api_key_here
    ```
 
 ## EmailJS Configuration
@@ -42,7 +42,7 @@ Your EmailJS template should use these variable names:
 
 1. Sign up at https://api.imgbb.com/
 2. Get your API key from the dashboard
-3. Add it to `.env.local` as `VITE_IMGBB_KEY`
+3. Add it to `.env.local` as `PUBLIC_IMGBB_KEY`
 
 ## Implementation Details
 
@@ -84,7 +84,7 @@ Your EmailJS template should use these variable names:
 - Ensure your EmailJS account is active
 
 ### ImgBB Errors
-- Verify `VITE_IMGBB_KEY` is set in `.env.local`
+- Verify `PUBLIC_IMGBB_KEY` is set in `.env.local`
 - Check that the API key is valid and not expired
 - Ensure image file size is within ImgBB limits (32MB)
 
