@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -8,6 +8,8 @@ import { Card } from "@/components/ui/card";
 import { ArrowLeft, Upload } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useTranslation } from "react-i18next";
+import { uploadImageToImgBB } from "@/lib/imgbb";
+import { sendEmailViaEmailJS, type EmailJSParams } from "@/lib/emailjs";
 
 const RequestService = () => {
   const { t } = useTranslation();
@@ -15,6 +17,7 @@ const RequestService = () => {
   const serviceType = searchParams.get('type') || '';
   const navigate = useNavigate();
   const { toast } = useToast();
+  const formRef = useRef<HTMLFormElement>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [photoFile, setPhotoFile] = useState<File | null>(null);
 
@@ -39,9 +42,17 @@ const RequestService = () => {
     }
   };
 
+  /**
+   * Handles form submission with EmailJS integration
+   * - Uploads photo to ImgBB if provided
+   * - Sends email via EmailJS
+   * - Shows success/error messages
+   * - Clears form on success
+   */
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
+    // Validate required fields
     if (!formData.name || !formData.phone || !formData.address) {
       toast({
         title: t('requestService.missingInfo'),
@@ -53,11 +64,73 @@ const RequestService = () => {
 
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      let photoUrl = "No photo";
+
+      // Upload photo to ImgBB if provided
+      if (photoFile) {
+        try {
+          photoUrl = await uploadImageToImgBB(photoFile);
+        } catch (photoError) {
+          console.error('Photo upload error:', photoError);
+          toast({
+            title: t('requestService.photoUploadError') || "Photo Upload Failed",
+            description: photoError instanceof Error ? photoError.message : "Failed to upload photo. Continuing without photo...",
+            variant: "destructive"
+          });
+          // Continue with submission even if photo upload fails
+        }
+      }
+
+      // Prepare EmailJS parameters
+      const emailParams: EmailJSParams = {
+        full_name: formData.name,
+        phone: formData.phone,
+        address: formData.address,
+        service_type: formData.serviceType || "General",
+        description: formData.description || "No description provided",
+        photo: photoUrl
+      };
+
+      // Send email via EmailJS
+      await sendEmailViaEmailJS(emailParams);
+
+      // Show success message
+      toast({
+        title: t('requestService.success') || "Request Sent!",
+        description: t('requestService.successMessage') || "Your service request has been submitted successfully.",
+      });
+
+      // Clear form
+      setFormData({
+        name: '',
+        phone: '',
+        address: '',
+        serviceType: serviceType,
+        description: ''
+      });
+      setPhotoFile(null);
+      
+      // Reset file input
+      if (formRef.current) {
+        const fileInput = formRef.current.querySelector('input[type="file"]') as HTMLInputElement;
+        if (fileInput) {
+          fileInput.value = '';
+        }
+      }
+
+      // Navigate to confirmation page
       navigate('/confirmation');
-    }, 1000);
+    } catch (error) {
+      console.error('Form submission error:', error);
+      toast({
+        title: t('requestService.error') || "Submission Failed",
+        description: error instanceof Error ? error.message : "An error occurred while submitting your request. Please try again.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -82,7 +155,7 @@ const RequestService = () => {
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
             <div>
               <Label htmlFor="name" className="text-card-foreground">{t('requestService.name')} {t('requestService.required')}</Label>
               <Input
