@@ -1,0 +1,9 @@
+# Netlify SPA Redirect Rules
+# This file ensures all client-side routes are handled by React Router
+# Format: <path> <destination> <status_code>
+
+# Redirect all routes to index.html for client-side routing
+# The 200 status code tells Netlify to serve the file (not redirect)
+# This allows React Router to handle all routing client-side
+/*    /index.html   200
+
