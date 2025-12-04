@@ -14,4 +14,5 @@ export interface EmailJSParams {
   service_type: string;
   description: string;
   photo: string;
+  [key: string]: unknown;
 }

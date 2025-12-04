@@ -12,7 +12,7 @@ const ServiceDetail = () => {
   const navigate = useNavigate();
   const { service } = useParams();
 
-  const services = ["electrician", "plumber", "painter", "carpenter", "handyman", "gardening", "builder", "welder", "pool"];
+  const services = ["electrician", "plumber", "painter", "carpenter", "handyman", "gardening", "builder", "welder", "pool", "airconditioning", "solar"];
   
   if (!service || !services.includes(service)) {
     return <NotFound />;

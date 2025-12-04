@@ -149,6 +149,34 @@
         "3": "Entretien de pompes et filtres de piscine",
         "4": "Services d'ouverture et fermeture de piscine"
       }
+    },
+    "airconditioning": {
+      "title": "Climatisation",
+      "description": "Installation, réparation, entretien climatisation",
+      "detailTitle": "Services de Climatisation Professionnels à Essaouira",
+      "detailSubtitle": "Installation, réparation et entretien de climatisation experts",
+      "detailDescription": "Spécialistes en climatisation certifiés à Essaouira fournissant des services complets de climatisation incluant installation, réparation, entretien et remplacement. Spécialisés dans les solutions de refroidissement pour le climat côtier.",
+      "features": {
+        "0": "Installation et configuration d'unités de climatisation",
+        "1": "Réparation et dépannage de climatisation",
+        "2": "Entretien préventif et nettoyage",
+        "3": "Recharge de réfrigérant et détection de fuites",
+        "4": "Recommandations de systèmes écoénergétiques"
+      }
+    },
+    "solar": {
+      "title": "Énergie Solaire",
+      "description": "Installation et entretien de panneaux solaires",
+      "detailTitle": "Services d'Énergie Solaire Professionnels à Essaouira",
+      "detailSubtitle": "Installation, entretien et consultation en panneaux solaires",
+      "detailDescription": "Spécialistes en énergie solaire experts à Essaouira offrant installation complète de panneaux solaires, entretien et services de consultation. Profitez de l'abondant soleil du Maroc avec des solutions solaires efficaces pour votre maison ou entreprise.",
+      "features": {
+        "0": "Installation et configuration de panneaux solaires",
+        "1": "Entretien et nettoyage du système",
+        "2": "Solutions de stockage par batterie",
+        "3": "Connexion au réseau et installation d'onduleur",
+        "4": "Consultation et audits d'efficacité énergétique"
+      }
     }
   },
   "serviceArea": {
