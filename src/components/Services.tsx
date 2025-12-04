@@ -1,4 +1,4 @@
-import { Wrench, Droplet, Paintbrush, Hammer, Lightbulb, Leaf, HardHat, Flame, Waves } from "lucide-react";
+import { Wrench, Droplet, Paintbrush, Hammer, Lightbulb, Leaf, HardHat, Flame, Waves, AirVent, Sun } from "lucide-react";
 import ServiceCard from "./ServiceCard";
 import { useTranslation } from "react-i18next";
 
@@ -59,6 +59,18 @@ const Services = () => {
       titleKey: "services.pool.title",
       descriptionKey: "services.pool.description",
       serviceType: "Pool"
+    },
+    {
+      icon: AirVent,
+      titleKey: "services.airconditioning.title",
+      descriptionKey: "services.airconditioning.description",
+      serviceType: "AirConditioning"
+    },
+    {
+      icon: Sun,
+      titleKey: "services.solar.title",
+      descriptionKey: "services.solar.description",
+      serviceType: "Solar"
     }
   ];
 

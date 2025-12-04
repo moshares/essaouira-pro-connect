@@ -149,6 +149,34 @@
         "3": "Pool pump and filter maintenance",
         "4": "Pool opening and closing services"
       }
+    },
+    "airconditioning": {
+      "title": "Air Conditioning",
+      "description": "AC installation, repair, maintenance",
+      "detailTitle": "Professional Air Conditioning Services in Essaouira",
+      "detailSubtitle": "Expert AC installation, repair, and maintenance for homes and businesses",
+      "detailDescription": "Certified air conditioning specialists in Essaouira providing comprehensive AC services including installation, repair, maintenance, and replacement. Specialized in coastal climate cooling solutions for residential and commercial properties.",
+      "features": {
+        "0": "AC unit installation and setup",
+        "1": "Air conditioning repair and troubleshooting",
+        "2": "Preventive maintenance and cleaning",
+        "3": "Refrigerant recharge and leak detection",
+        "4": "Energy-efficient system recommendations"
+      }
+    },
+    "solar": {
+      "title": "Solar Energy",
+      "description": "Solar panel installation and maintenance",
+      "detailTitle": "Professional Solar Energy Services in Essaouira",
+      "detailSubtitle": "Solar panel installation, maintenance, and consulting",
+      "detailDescription": "Expert solar energy specialists in Essaouira offering complete solar panel installation, maintenance, and consulting services. Take advantage of Morocco's abundant sunshine with efficient solar solutions for your home or business.",
+      "features": {
+        "0": "Solar panel installation and setup",
+        "1": "System maintenance and cleaning",
+        "2": "Battery storage solutions",
+        "3": "Grid connection and inverter installation",
+        "4": "Energy efficiency consultation and audits"
+      }
     }
   },
   "serviceArea": {

@@ -185,14 +185,13 @@ export const requestService = async (formData: ServiceRequestFormData): Promise<
     // Status 200 indicates success, but we should also check for other success indicators
     console.log('EmailJS response:', {
       status: response.status,
-      text: response.text,
-      statusText: response.statusText
+      text: response.text
     });
 
     // Accept status 200 as success (EmailJS standard success code)
     // Some versions might return 0 or other codes, so we check for both
     if (response.status !== 200 && response.status !== 0) {
-      throw new Error(`EmailJS returned status ${response.status}: ${response.text || response.statusText || 'Unknown error'}`);
+      throw new Error(`EmailJS returned status ${response.status}: ${response.text || 'Unknown error'}`);
     }
 
     // Additional validation: check if response.text indicates success
