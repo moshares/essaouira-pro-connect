@@ -1,3 +1,30 @@
+# Robots.txt pour essaouirapro.com
+# Services à Domicile Essaouira - Site multilingue (FR, EN, AR)
+
 User-agent: *
 Allow: /
+
+# Fichiers importants
 Sitemap: https://essaouirapro.com/sitemap.xml
+
+# Autoriser l'indexation de toutes les pages de services
+Allow: /services/
+Allow: /blog/
+Allow: /request-service
+
+# Bloquer les pages non essentielles
+Disallow: /api/
+Disallow: /*.json$
+
+# Paramètres de crawl
+Crawl-delay: 1
+
+# Googlebot spécifique
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Bingbot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
