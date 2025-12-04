@@ -19,11 +19,11 @@ function detectLanguage(): string {
   }
 
   // Detect browser language
-  const browserLang = navigator.language || navigator.languages?.[0] || 'en';
+  const browserLang = navigator.language || navigator.languages?.[0] || 'fr';
   const lang = browserLang.split('-')[0].toLowerCase();
 
-  // Check if detected language is supported, otherwise default to English
-  const finalLang = supported.includes(lang) ? lang : 'en';
+  // Check if detected language is supported, otherwise default to French
+  const finalLang = supported.includes(lang) ? lang : 'fr';
   
   // Store in localStorage for future visits
   localStorage.setItem('lang', finalLang);
@@ -53,7 +53,7 @@ i18n
       ar: { translation: ar }
     },
     lng: detectedLang, // Set the detected language
-    fallbackLng: 'en',
+    fallbackLng: 'fr',
     interpolation: {
       escapeValue: false
     },
