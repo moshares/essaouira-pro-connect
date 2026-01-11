@@ -7,18 +7,33 @@ import SchemaMarkup from "@/components/SchemaMarkup";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import NotFound from "./NotFound";
 
+// Map French slugs to translation keys
+const serviceSlugToKey: Record<string, string> = {
+  "electricien": "electrician",
+  "plombier": "plumber",
+  "peintre": "painter",
+  "menuisier": "carpenter",
+  "bricoleur": "handyman",
+  "jardinage": "gardening",
+  "macon": "builder",
+  "soudeur": "welder",
+  "piscine": "pool",
+  "climatisation": "airconditioning",
+  "solaire": "solar"
+};
+
 const ServiceDetail = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const { service } = useParams();
 
-  const services = ["electrician", "plumber", "painter", "carpenter", "handyman", "gardening", "builder", "welder", "pool", "airconditioning", "solar"];
+  const validSlugs = Object.keys(serviceSlugToKey);
   
-  if (!service || !services.includes(service)) {
+  if (!service || !validSlugs.includes(service)) {
     return <NotFound />;
   }
 
-  const serviceKey = service as string;
+  const serviceKey = serviceSlugToKey[service];
 
   return (
     <>
@@ -63,7 +78,7 @@ const ServiceDetail = () => {
                 </p>
                 <Button
                   size="lg"
-                  onClick={() => navigate(`/request-service?type=${t(`services.${serviceKey}.title`)}`)}
+                  onClick={() => navigate(`/demander-service?type=${t(`services.${serviceKey}.title`)}`)}
                   className="w-full md:w-auto"
                 >
                   {t('services.requestNow')}
@@ -110,7 +125,7 @@ const ServiceDetail = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
                   size="lg"
-                  onClick={() => navigate(`/request-service?type=${t(`services.${serviceKey}.title`)}`)}
+                  onClick={() => navigate(`/demander-service?type=${t(`services.${serviceKey}.title`)}`)}
                 >
                   {t('services.getQuote')}
                 </Button>

@@ -6,16 +6,16 @@ interface ServiceCardProps {
   icon: LucideIcon;
   title: string;
   description: string;
-  serviceType: string;
+  serviceSlug: string;
 }
 
-const ServiceCard = ({ icon: Icon, title, description, serviceType }: ServiceCardProps) => {
+const ServiceCard = ({ icon: Icon, title, description, serviceSlug }: ServiceCardProps) => {
   const navigate = useNavigate();
 
   return (
     <Card 
       className="group p-6 hover:shadow-soft transition-all duration-300 cursor-pointer border-2 hover:border-primary bg-card"
-      onClick={() => navigate(`/services/${serviceType.toLowerCase()}`)}
+      onClick={() => navigate(`/services/${serviceSlug}`)}
     >
       <div className="flex flex-col items-center text-center space-y-4">
         <div className="w-16 h-16 rounded-full bg-ocean-light flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
