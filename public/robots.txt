@@ -10,7 +10,7 @@ Sitemap: https://essaouirapro.com/sitemap.xml
 # Autoriser l'indexation de toutes les pages de services
 Allow: /services/
 Allow: /blog/
-Allow: /request-service
+Allow: /demander-service
 
 # Bloquer les pages non essentielles
 Disallow: /api/

@@ -26,7 +26,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/services/:service" element={<ServiceDetail />} />
-            <Route path="/request-service" element={<RequestService />} />
+            <Route path="/demander-service" element={<RequestService />} />
             <Route path="/confirmation" element={<Confirmation />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />

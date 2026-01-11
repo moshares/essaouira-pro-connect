@@ -19,10 +19,10 @@
   
   <!-- Page de Demande de Service -->
   <url>
-    <loc>https://essaouirapro.com/request-service</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://essaouirapro.com/request-service"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://essaouirapro.com/request-service"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://essaouirapro.com/request-service"/>
+    <loc>https://essaouirapro.com/demander-service</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://essaouirapro.com/demander-service"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://essaouirapro.com/demander-service"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://essaouirapro.com/demander-service"/>
     <lastmod>2025-12-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -41,10 +41,10 @@
   
   <!-- Services - Électricien -->
   <url>
-    <loc>https://essaouirapro.com/services/electrician</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://essaouirapro.com/services/electrician"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://essaouirapro.com/services/electrician"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://essaouirapro.com/services/electrician"/>
+    <loc>https://essaouirapro.com/services/electricien</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://essaouirapro.com/services/electricien"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://essaouirapro.com/services/electricien"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://essaouirapro.com/services/electricien"/>
     <lastmod>2025-12-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -52,10 +52,10 @@
   
   <!-- Services - Plombier -->
   <url>
-    <loc>https://essaouirapro.com/services/plumber</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://essaouirapro.com/services/plumber"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://essaouirapro.com/services/plumber"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://essaouirapro.com/services/plumber"/>
+    <loc>https://essaouirapro.com/services/plombier</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://essaouirapro.com/services/plombier"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://essaouirapro.com/services/plombier"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://essaouirapro.com/services/plombier"/>
     <lastmod>2025-12-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -63,10 +63,10 @@
   
   <!-- Services - Peintre -->
   <url>
-    <loc>https://essaouirapro.com/services/painter</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://essaouirapro.com/services/painter"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://essaouirapro.com/services/painter"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://essaouirapro.com/services/painter"/>
+    <loc>https://essaouirapro.com/services/peintre</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://essaouirapro.com/services/peintre"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://essaouirapro.com/services/peintre"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://essaouirapro.com/services/peintre"/>
     <lastmod>2025-12-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -74,21 +74,21 @@
   
   <!-- Services - Menuisier -->
   <url>
-    <loc>https://essaouirapro.com/services/carpenter</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://essaouirapro.com/services/carpenter"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://essaouirapro.com/services/carpenter"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://essaouirapro.com/services/carpenter"/>
+    <loc>https://essaouirapro.com/services/menuisier</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://essaouirapro.com/services/menuisier"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://essaouirapro.com/services/menuisier"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://essaouirapro.com/services/menuisier"/>
     <lastmod>2025-12-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   
-  <!-- Services - Homme à Tout Faire -->
+  <!-- Services - Bricoleur -->
   <url>
-    <loc>https://essaouirapro.com/services/handyman</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://essaouirapro.com/services/handyman"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://essaouirapro.com/services/handyman"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://essaouirapro.com/services/handyman"/>
+    <loc>https://essaouirapro.com/services/bricoleur</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://essaouirapro.com/services/bricoleur"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://essaouirapro.com/services/bricoleur"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://essaouirapro.com/services/bricoleur"/>
     <lastmod>2025-12-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -96,10 +96,10 @@
   
   <!-- Services - Jardinage -->
   <url>
-    <loc>https://essaouirapro.com/services/gardening</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://essaouirapro.com/services/gardening"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://essaouirapro.com/services/gardening"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://essaouirapro.com/services/gardening"/>
+    <loc>https://essaouirapro.com/services/jardinage</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://essaouirapro.com/services/jardinage"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://essaouirapro.com/services/jardinage"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://essaouirapro.com/services/jardinage"/>
     <lastmod>2025-12-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -107,10 +107,10 @@
   
   <!-- Services - Maçon -->
   <url>
-    <loc>https://essaouirapro.com/services/builder</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://essaouirapro.com/services/builder"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://essaouirapro.com/services/builder"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://essaouirapro.com/services/builder"/>
+    <loc>https://essaouirapro.com/services/macon</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://essaouirapro.com/services/macon"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://essaouirapro.com/services/macon"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://essaouirapro.com/services/macon"/>
     <lastmod>2025-12-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -118,10 +118,10 @@
   
   <!-- Services - Soudeur -->
   <url>
-    <loc>https://essaouirapro.com/services/welder</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://essaouirapro.com/services/welder"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://essaouirapro.com/services/welder"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://essaouirapro.com/services/welder"/>
+    <loc>https://essaouirapro.com/services/soudeur</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://essaouirapro.com/services/soudeur"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://essaouirapro.com/services/soudeur"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://essaouirapro.com/services/soudeur"/>
     <lastmod>2025-12-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -129,10 +129,10 @@
   
   <!-- Services - Piscine -->
   <url>
-    <loc>https://essaouirapro.com/services/pool</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://essaouirapro.com/services/pool"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://essaouirapro.com/services/pool"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://essaouirapro.com/services/pool"/>
+    <loc>https://essaouirapro.com/services/piscine</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://essaouirapro.com/services/piscine"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://essaouirapro.com/services/piscine"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://essaouirapro.com/services/piscine"/>
     <lastmod>2025-12-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -140,10 +140,10 @@
   
   <!-- Services - Climatisation -->
   <url>
-    <loc>https://essaouirapro.com/services/airconditioning</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://essaouirapro.com/services/airconditioning"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://essaouirapro.com/services/airconditioning"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://essaouirapro.com/services/airconditioning"/>
+    <loc>https://essaouirapro.com/services/climatisation</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://essaouirapro.com/services/climatisation"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://essaouirapro.com/services/climatisation"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://essaouirapro.com/services/climatisation"/>
     <lastmod>2025-12-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -151,10 +151,10 @@
   
   <!-- Services - Énergie Solaire -->
   <url>
-    <loc>https://essaouirapro.com/services/solar</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://essaouirapro.com/services/solar"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://essaouirapro.com/services/solar"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://essaouirapro.com/services/solar"/>
+    <loc>https://essaouirapro.com/services/solaire</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://essaouirapro.com/services/solaire"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://essaouirapro.com/services/solaire"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://essaouirapro.com/services/solaire"/>
     <lastmod>2025-12-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -162,40 +162,40 @@
   
   <!-- Articles de Blog -->
   <url>
-    <loc>https://essaouirapro.com/blog/top-5-home-repairs-essaouira</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://essaouirapro.com/blog/top-5-home-repairs-essaouira"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://essaouirapro.com/blog/top-5-home-repairs-essaouira"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://essaouirapro.com/blog/top-5-home-repairs-essaouira"/>
+    <loc>https://essaouirapro.com/blog/top-5-reparations-maison-essaouira</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://essaouirapro.com/blog/top-5-reparations-maison-essaouira"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://essaouirapro.com/blog/top-5-reparations-maison-essaouira"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://essaouirapro.com/blog/top-5-reparations-maison-essaouira"/>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://essaouirapro.com/blog/choosing-electrician-essaouira</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://essaouirapro.com/blog/choosing-electrician-essaouira"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://essaouirapro.com/blog/choosing-electrician-essaouira"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://essaouirapro.com/blog/choosing-electrician-essaouira"/>
+    <loc>https://essaouirapro.com/blog/choisir-electricien-essaouira</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://essaouirapro.com/blog/choisir-electricien-essaouira"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://essaouirapro.com/blog/choisir-electricien-essaouira"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://essaouirapro.com/blog/choisir-electricien-essaouira"/>
     <lastmod>2025-01-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://essaouirapro.com/blog/humidity-paint-coastal-homes</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://essaouirapro.com/blog/humidity-paint-coastal-homes"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://essaouirapro.com/blog/humidity-paint-coastal-homes"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://essaouirapro.com/blog/humidity-paint-coastal-homes"/>
+    <loc>https://essaouirapro.com/blog/humidite-peinture-maisons-cotieres</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://essaouirapro.com/blog/humidite-peinture-maisons-cotieres"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://essaouirapro.com/blog/humidite-peinture-maisons-cotieres"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://essaouirapro.com/blog/humidite-peinture-maisons-cotieres"/>
     <lastmod>2025-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://essaouirapro.com/blog/plumbing-tips-coastal-properties</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://essaouirapro.com/blog/plumbing-tips-coastal-properties"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://essaouirapro.com/blog/plumbing-tips-coastal-properties"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://essaouirapro.com/blog/plumbing-tips-coastal-properties"/>
+    <loc>https://essaouirapro.com/blog/conseils-plomberie-proprietes-cotieres</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://essaouirapro.com/blog/conseils-plomberie-proprietes-cotieres"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://essaouirapro.com/blog/conseils-plomberie-proprietes-cotieres"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://essaouirapro.com/blog/conseils-plomberie-proprietes-cotieres"/>
     <lastmod>2025-02-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

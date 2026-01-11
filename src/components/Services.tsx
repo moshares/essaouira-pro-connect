@@ -10,67 +10,67 @@ const Services = () => {
       icon: Lightbulb,
       titleKey: "services.electrician.title",
       descriptionKey: "services.electrician.description",
-      serviceType: "Electrician"
+      serviceSlug: "electricien"
     },
     {
       icon: Droplet,
       titleKey: "services.plumber.title",
       descriptionKey: "services.plumber.description",
-      serviceType: "Plumber"
+      serviceSlug: "plombier"
     },
     {
       icon: Paintbrush,
       titleKey: "services.painter.title",
       descriptionKey: "services.painter.description",
-      serviceType: "Painter"
+      serviceSlug: "peintre"
     },
     {
       icon: Hammer,
       titleKey: "services.carpenter.title",
       descriptionKey: "services.carpenter.description",
-      serviceType: "Carpenter"
+      serviceSlug: "menuisier"
     },
     {
       icon: Wrench,
       titleKey: "services.handyman.title",
       descriptionKey: "services.handyman.description",
-      serviceType: "Handyman"
+      serviceSlug: "bricoleur"
     },
     {
       icon: Leaf,
       titleKey: "services.gardening.title",
       descriptionKey: "services.gardening.description",
-      serviceType: "Gardening"
+      serviceSlug: "jardinage"
     },
     {
       icon: HardHat,
       titleKey: "services.builder.title",
       descriptionKey: "services.builder.description",
-      serviceType: "Builder"
+      serviceSlug: "macon"
     },
     {
       icon: Flame,
       titleKey: "services.welder.title",
       descriptionKey: "services.welder.description",
-      serviceType: "Welder"
+      serviceSlug: "soudeur"
     },
     {
       icon: Waves,
       titleKey: "services.pool.title",
       descriptionKey: "services.pool.description",
-      serviceType: "Pool"
+      serviceSlug: "piscine"
     },
     {
       icon: AirVent,
       titleKey: "services.airconditioning.title",
       descriptionKey: "services.airconditioning.description",
-      serviceType: "AirConditioning"
+      serviceSlug: "climatisation"
     },
     {
       icon: Sun,
       titleKey: "services.solar.title",
       descriptionKey: "services.solar.description",
-      serviceType: "Solar"
+      serviceSlug: "solaire"
     }
   ];
 
@@ -91,7 +91,7 @@ const Services = () => {
               icon={service.icon}
               title={t(service.titleKey)}
               description={t(service.descriptionKey)}
-              serviceType={service.serviceType}
+              serviceSlug={service.serviceSlug}
             />
           ))}
         </div>
