@@ -11,11 +11,18 @@ const Blog = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
+  const origin = window.location.origin;
+  const breadcrumbs = [
+    { name: "Accueil", url: origin },
+    { name: "Blog", url: `${origin}/blog` }
+  ];
+
   return (
     <>
       <SchemaMarkup 
         title={t('blog.title')}
         description={t('blog.subtitle')}
+        breadcrumbs={breadcrumbs}
       />
       
       <div className="min-h-screen bg-background">
@@ -23,7 +30,7 @@ const Blog = () => {
           <div className="absolute top-6 right-6">
             <LanguageSwitcher />
           </div>
-          <div className="container mx-auto px-4">
+          <nav className="container mx-auto px-4" aria-label="Navigation">
             <Button
               variant="ghost"
               onClick={() => navigate("/")}
@@ -32,6 +39,8 @@ const Blog = () => {
               <ArrowLeft className="mr-2 h-4 w-4" />
               {t('blog.backHome')}
             </Button>
+          </nav>
+          <div className="container mx-auto px-4">
             <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-4">
               {t('blog.title')}
             </h1>
@@ -41,7 +50,7 @@ const Blog = () => {
           </div>
         </header>
 
-        <section className="py-16">
+        <section className="py-16" aria-label="Articles de blog">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {blogPosts.map((post) => (
@@ -49,6 +58,7 @@ const Blog = () => {
                   key={post.id}
                   className="overflow-hidden hover:shadow-lg transition-shadow cursor-pointer group"
                   onClick={() => navigate(`/blog/${post.slug}`)}
+                  role="article"
                 >
                   {post.image && (
                     <div className="aspect-video overflow-hidden">
@@ -56,17 +66,20 @@ const Blog = () => {
                         src={post.image} 
                         alt={t(post.titleKey)}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        loading="lazy"
+                        width="400"
+                        height="225"
                       />
                     </div>
                   )}
                   <div className="p-6">
                     <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
+                      <time dateTime={post.publishedDate} className="flex items-center gap-1">
+                        <Calendar className="h-4 w-4" aria-hidden="true" />
+                        <span>{new Date(post.publishedDate).toLocaleDateString('fr-FR', { year: 'numeric', month: 'short', day: 'numeric' })}</span>
+                      </time>
                       <div className="flex items-center gap-1">
-                        <Calendar className="h-4 w-4" />
-                        <span>{new Date(post.publishedDate).toLocaleDateString()}</span>
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <Clock className="h-4 w-4" />
+                        <Clock className="h-4 w-4" aria-hidden="true" />
                         <span>{post.readTime} {t('blog.minRead')}</span>
                       </div>
                     </div>

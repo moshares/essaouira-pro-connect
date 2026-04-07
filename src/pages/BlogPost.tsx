@@ -18,6 +18,13 @@ const BlogPost = () => {
     return <NotFound />;
   }
 
+  const origin = window.location.origin;
+  const breadcrumbs = [
+    { name: "Accueil", url: origin },
+    { name: "Blog", url: `${origin}/blog` },
+    { name: t(post.titleKey), url: `${origin}/blog/${post.slug}` }
+  ];
+
   return (
     <>
       <SchemaMarkup
@@ -28,6 +35,7 @@ const BlogPost = () => {
           publishedTime: post.publishedDate,
           author: post.author
         }}
+        breadcrumbs={breadcrumbs}
       />
 
       <div className="min-h-screen bg-background">
@@ -35,7 +43,7 @@ const BlogPost = () => {
           <div className="absolute top-6 right-6">
             <LanguageSwitcher />
           </div>
-          <div className="container mx-auto px-4">
+          <nav className="container mx-auto px-4" aria-label="Navigation">
             <Button
               variant="ghost"
               onClick={() => navigate("/blog")}
@@ -44,7 +52,7 @@ const BlogPost = () => {
               <ArrowLeft className="mr-2 h-4 w-4" />
               {t('blog.backToBlog')}
             </Button>
-          </div>
+          </nav>
         </header>
 
         <article className="py-16">
@@ -54,12 +62,12 @@ const BlogPost = () => {
                 {t(post.titleKey)}
               </h1>
               <div className="flex items-center gap-6 text-muted-foreground">
+                <time dateTime={post.publishedDate} className="flex items-center gap-2">
+                  <Calendar className="h-5 w-5" aria-hidden="true" />
+                  <span>{new Date(post.publishedDate).toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+                </time>
                 <div className="flex items-center gap-2">
-                  <Calendar className="h-5 w-5" />
-                  <span>{new Date(post.publishedDate).toLocaleDateString()}</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Clock className="h-5 w-5" />
+                  <Clock className="h-5 w-5" aria-hidden="true" />
                   <span>{post.readTime} {t('blog.minRead')}</span>
                 </div>
                 <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">
@@ -73,6 +81,7 @@ const BlogPost = () => {
                 src={post.image} 
                 alt={t(post.titleKey)}
                 className="aspect-video w-full object-cover rounded-lg mb-8"
+                loading="lazy"
               />
             )}
 
@@ -86,7 +95,7 @@ const BlogPost = () => {
 
             <div className="mt-12 pt-8 border-t border-border">
               <Button
-                onClick={() => navigate("/request-service")}
+                onClick={() => navigate("/demander-service")}
                 size="lg"
                 className="w-full md:w-auto"
               >

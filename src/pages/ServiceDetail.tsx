@@ -7,7 +7,6 @@ import SchemaMarkup from "@/components/SchemaMarkup";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import NotFound from "./NotFound";
 
-// Map French slugs to translation keys
 const serviceSlugToKey: Record<string, string> = {
   "electricien": "electrician",
   "plombier": "plumber",
@@ -34,13 +33,28 @@ const ServiceDetail = () => {
   }
 
   const serviceKey = serviceSlugToKey[service];
+  const serviceTitle = t(`services.${serviceKey}.detailTitle`);
+  const serviceDesc = t(`services.${serviceKey}.detailDescription`);
+  const origin = window.location.origin;
+
+  const breadcrumbs = [
+    { name: "Accueil", url: origin },
+    { name: "Services", url: `${origin}/#services` },
+    { name: t(`services.${serviceKey}.title`), url: `${origin}/services/${service}` }
+  ];
 
   return (
     <>
       <SchemaMarkup
-        title={t(`services.${serviceKey}.detailTitle`)}
-        description={t(`services.${serviceKey}.detailDescription`)}
+        title={serviceTitle}
+        description={serviceDesc}
         type="service"
+        service={{
+          name: serviceTitle,
+          description: serviceDesc,
+          slug: service
+        }}
+        breadcrumbs={breadcrumbs}
       />
 
       <div className="min-h-screen bg-background">
@@ -48,7 +62,7 @@ const ServiceDetail = () => {
           <div className="absolute top-6 right-6">
             <LanguageSwitcher />
           </div>
-          <div className="container mx-auto px-4">
+          <nav className="container mx-auto px-4" aria-label="Navigation">
             <Button
               variant="ghost"
               onClick={() => navigate("/")}
@@ -57,8 +71,10 @@ const ServiceDetail = () => {
               <ArrowLeft className="mr-2 h-4 w-4" />
               {t('services.backHome')}
             </Button>
+          </nav>
+          <div className="container mx-auto px-4">
             <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-4">
-              {t(`services.${serviceKey}.detailTitle`)}
+              {serviceTitle}
             </h1>
             <p className="text-xl text-primary-foreground/90 max-w-2xl">
               {t(`services.${serviceKey}.detailSubtitle`)}
@@ -66,7 +82,7 @@ const ServiceDetail = () => {
           </div>
         </header>
 
-        <section className="py-16">
+        <article className="py-16">
           <div className="container mx-auto px-4 max-w-6xl">
             <div className="grid md:grid-cols-2 gap-12 mb-16">
               <div>
@@ -74,7 +90,7 @@ const ServiceDetail = () => {
                   {t('services.whatWeOffer')}
                 </h2>
                 <p className="text-muted-foreground mb-6 text-lg leading-relaxed">
-                  {t(`services.${serviceKey}.detailDescription`)}
+                  {serviceDesc}
                 </p>
                 <Button
                   size="lg"
@@ -92,7 +108,7 @@ const ServiceDetail = () => {
                 <ul className="space-y-4">
                   {[0, 1, 2, 3, 4].map((index) => (
                     <li key={index} className="flex items-start gap-3">
-                      <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
+                      <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" aria-hidden="true" />
                       <span className="text-muted-foreground">
                         {t(`services.${serviceKey}.features.${index}`)}
                       </span>
@@ -139,7 +155,7 @@ const ServiceDetail = () => {
               </div>
             </div>
           </div>
-        </section>
+        </article>
       </div>
     </>
   );
