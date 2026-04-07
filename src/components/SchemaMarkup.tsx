@@ -36,7 +36,7 @@ const SchemaMarkup = ({ title, description, type = "website", article, service, 
     "description": "Services professionnels à domicile à Essaouira, Maroc. Électriciens, plombiers, peintres, menuisiers, bricoleurs, jardiniers, maçons, soudeurs, piscinistes, climatisation et énergie solaire.",
     "url": origin,
     "telephone": "+212652659003",
-    "image": `${origin}/og-image.png`,
+    "image": `${origin}/og-image.jpg`,
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Essaouira",
@@ -217,7 +217,7 @@ const SchemaMarkup = ({ title, description, type = "website", article, service, 
       <meta property="og:description" content={pageDescription} />
       <meta property="og:type" content={type === "article" ? "article" : "website"} />
       <meta property="og:url" content={window.location.href} />
-      <meta property="og:image" content={`${origin}/og-image.png`} />
+      <meta property="og:image" content={`${origin}/og-image.jpg`} />
       <meta property="og:locale" content="fr_FR" />
       <meta property="og:locale:alternate" content="en_US" />
       <meta property="og:locale:alternate" content="ar_MA" />
@@ -227,7 +227,7 @@ const SchemaMarkup = ({ title, description, type = "website", article, service, 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={pageTitle} />
       <meta name="twitter:description" content={pageDescription} />
-      <meta name="twitter:image" content={`${origin}/og-image.png`} />
+      <meta name="twitter:image" content={`${origin}/og-image.jpg`} />
       
       {/* Geo tags */}
       <meta name="geo.region" content="MA-ESS" />
