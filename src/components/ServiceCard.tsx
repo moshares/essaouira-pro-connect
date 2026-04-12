@@ -20,11 +20,11 @@ const ServiceCard = ({ icon: Icon, title, description, serviceSlug, backgroundIm
     >
       {backgroundImage && (
         <div 
-          className="absolute inset-0 bg-cover bg-center opacity-20 group-hover:opacity-35 transition-opacity duration-300"
+          className="absolute inset-0 bg-cover bg-center opacity-50 group-hover:opacity-65 transition-opacity duration-300"
           style={{ backgroundImage: `url(${backgroundImage})` }}
         />
       )}
-      <div className="absolute inset-0 bg-gradient-to-t from-card/90 via-card/60 to-card/40" />
+      <div className="absolute inset-0 bg-gradient-to-t from-card/80 via-card/50 to-card/30" />
       <div className="relative flex flex-col items-center text-center space-y-4">
         <div className="w-16 h-16 rounded-full bg-ocean-light flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
           <Icon className="h-8 w-8 text-primary" />
