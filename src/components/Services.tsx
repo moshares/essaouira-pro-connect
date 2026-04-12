@@ -2,76 +2,33 @@ import { Wrench, Droplet, Paintbrush, Hammer, Lightbulb, Leaf, HardHat, Flame, W
 import ServiceCard from "./ServiceCard";
 import { useTranslation } from "react-i18next";
 
+import electricienBg from "@/assets/services/electricien.jpg";
+import plombierBg from "@/assets/services/plombier.jpg";
+import peintreBg from "@/assets/services/peintre.jpg";
+import menuisierBg from "@/assets/services/menuisier.jpg";
+import bricoleurBg from "@/assets/services/bricoleur.jpg";
+import jardinageBg from "@/assets/services/jardinage.jpg";
+import maconBg from "@/assets/services/macon.jpg";
+import soudeurBg from "@/assets/services/soudeur.jpg";
+import piscineBg from "@/assets/services/piscine.jpg";
+import climatisationBg from "@/assets/services/climatisation.jpg";
+import solaireBg from "@/assets/services/solaire.jpg";
+
 const Services = () => {
   const { t } = useTranslation();
   
   const services = [
-    {
-      icon: Lightbulb,
-      titleKey: "services.electrician.title",
-      descriptionKey: "services.electrician.description",
-      serviceSlug: "electricien"
-    },
-    {
-      icon: Droplet,
-      titleKey: "services.plumber.title",
-      descriptionKey: "services.plumber.description",
-      serviceSlug: "plombier"
-    },
-    {
-      icon: Paintbrush,
-      titleKey: "services.painter.title",
-      descriptionKey: "services.painter.description",
-      serviceSlug: "peintre"
-    },
-    {
-      icon: Hammer,
-      titleKey: "services.carpenter.title",
-      descriptionKey: "services.carpenter.description",
-      serviceSlug: "menuisier"
-    },
-    {
-      icon: Wrench,
-      titleKey: "services.handyman.title",
-      descriptionKey: "services.handyman.description",
-      serviceSlug: "bricoleur"
-    },
-    {
-      icon: Leaf,
-      titleKey: "services.gardening.title",
-      descriptionKey: "services.gardening.description",
-      serviceSlug: "jardinage"
-    },
-    {
-      icon: HardHat,
-      titleKey: "services.builder.title",
-      descriptionKey: "services.builder.description",
-      serviceSlug: "macon"
-    },
-    {
-      icon: Flame,
-      titleKey: "services.welder.title",
-      descriptionKey: "services.welder.description",
-      serviceSlug: "soudeur"
-    },
-    {
-      icon: Waves,
-      titleKey: "services.pool.title",
-      descriptionKey: "services.pool.description",
-      serviceSlug: "piscine"
-    },
-    {
-      icon: AirVent,
-      titleKey: "services.airconditioning.title",
-      descriptionKey: "services.airconditioning.description",
-      serviceSlug: "climatisation"
-    },
-    {
-      icon: Sun,
-      titleKey: "services.solar.title",
-      descriptionKey: "services.solar.description",
-      serviceSlug: "solaire"
-    }
+    { icon: Lightbulb, titleKey: "services.electrician.title", descriptionKey: "services.electrician.description", serviceSlug: "electricien", bg: electricienBg },
+    { icon: Droplet, titleKey: "services.plumber.title", descriptionKey: "services.plumber.description", serviceSlug: "plombier", bg: plombierBg },
+    { icon: Paintbrush, titleKey: "services.painter.title", descriptionKey: "services.painter.description", serviceSlug: "peintre", bg: peintreBg },
+    { icon: Hammer, titleKey: "services.carpenter.title", descriptionKey: "services.carpenter.description", serviceSlug: "menuisier", bg: menuisierBg },
+    { icon: Wrench, titleKey: "services.handyman.title", descriptionKey: "services.handyman.description", serviceSlug: "bricoleur", bg: bricoleurBg },
+    { icon: Leaf, titleKey: "services.gardening.title", descriptionKey: "services.gardening.description", serviceSlug: "jardinage", bg: jardinageBg },
+    { icon: HardHat, titleKey: "services.builder.title", descriptionKey: "services.builder.description", serviceSlug: "macon", bg: maconBg },
+    { icon: Flame, titleKey: "services.welder.title", descriptionKey: "services.welder.description", serviceSlug: "soudeur", bg: soudeurBg },
+    { icon: Waves, titleKey: "services.pool.title", descriptionKey: "services.pool.description", serviceSlug: "piscine", bg: piscineBg },
+    { icon: AirVent, titleKey: "services.airconditioning.title", descriptionKey: "services.airconditioning.description", serviceSlug: "climatisation", bg: climatisationBg },
+    { icon: Sun, titleKey: "services.solar.title", descriptionKey: "services.solar.description", serviceSlug: "solaire", bg: solaireBg },
   ];
 
   return (
@@ -92,6 +49,7 @@ const Services = () => {
               title={t(service.titleKey)}
               description={t(service.descriptionKey)}
               serviceSlug={service.serviceSlug}
+              backgroundImage={service.bg}
             />
           ))}
         </div>
