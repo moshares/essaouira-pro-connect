@@ -1,7 +1,8 @@
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Clock, Calendar } from "lucide-react";
-import { useNavigate, useParams } from "react-router-dom";
+import { Card } from "@/components/ui/card";
+import { ArrowLeft, Clock, Calendar, ArrowRight } from "lucide-react";
+import { useNavigate, useParams, Link } from "react-router-dom";
 import { blogPosts } from "@/data/blogPosts";
 import SchemaMarkup from "@/components/SchemaMarkup";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
@@ -93,7 +94,33 @@ const BlogPost = () => {
               ))}
             </div>
 
-            <div className="mt-12 pt-8 border-t border-border">
+            {post.relatedServices && post.relatedServices.length > 0 && (
+              <div className="mt-12 pt-8 border-t border-border">
+                <h2 className="text-2xl font-bold mb-6 text-foreground">
+                  {t('blog.relatedServices', 'Services Associés')}
+                </h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {post.relatedServices.map((service) => (
+                    <Link
+                      key={service.slugFr}
+                      to={`/services/${service.slugFr}`}
+                      className="no-underline"
+                    >
+                      <Card className="p-5 hover:shadow-lg hover:border-primary transition-all duration-200 group">
+                        <div className="flex items-center justify-between">
+                          <span className="font-semibold text-card-foreground group-hover:text-primary transition-colors">
+                            {t(service.titleKey)}
+                          </span>
+                          <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                        </div>
+                      </Card>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            <div className="mt-8 pt-8 border-t border-border">
               <Button
                 onClick={() => navigate("/demander-service")}
                 size="lg"

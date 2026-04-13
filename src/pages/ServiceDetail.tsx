@@ -1,11 +1,12 @@
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowLeft, CheckCircle2 } from "lucide-react";
-import { useNavigate, useParams } from "react-router-dom";
+import { ArrowLeft, CheckCircle2, ArrowRight } from "lucide-react";
+import { useNavigate, useParams, Link } from "react-router-dom";
 import SchemaMarkup from "@/components/SchemaMarkup";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import NotFound from "./NotFound";
+import { blogPosts } from "@/data/blogPosts";
 
 const serviceSlugToKey: Record<string, string> = {
   "electricien": "electrician",
@@ -131,7 +132,39 @@ const ServiceDetail = () => {
               </div>
             </div>
 
-            <div className="mt-16 text-center">
+            {/* Related blog posts */}
+            {(() => {
+              const relatedPosts = blogPosts.filter(post =>
+                post.relatedServices?.some(s => s.slugFr === service)
+              );
+              if (relatedPosts.length === 0) return null;
+              return (
+                <div className="mb-16">
+                  <h2 className="text-3xl font-bold mb-6 text-foreground">
+                    {t('services.relatedArticles', 'Articles Associés')}
+                  </h2>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {relatedPosts.map((post) => (
+                      <Link key={post.id} to={`/blog/${post.slug}`} className="no-underline">
+                        <Card className="overflow-hidden hover:shadow-lg hover:border-primary transition-all duration-200 group">
+                          {post.image && (
+                            <img src={post.image} alt={t(post.titleKey)} className="w-full h-32 object-cover" loading="lazy" />
+                          )}
+                          <div className="p-4 flex items-center justify-between gap-2">
+                            <span className="font-semibold text-sm text-card-foreground group-hover:text-primary transition-colors line-clamp-2">
+                              {t(post.titleKey)}
+                            </span>
+                            <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:text-primary flex-shrink-0 transition-colors" />
+                          </div>
+                        </Card>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              );
+            })()}
+
+            <div className="text-center">
               <h2 className="text-3xl font-bold mb-4 text-foreground">
                 {t('services.readyToStart')}
               </h2>
