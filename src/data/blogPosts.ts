@@ -18,20 +18,7 @@ export interface BlogPost {
   category: string;
   readTime: number;
   image?: string;
-}
-
-export interface BlogPost {
-  id: string;
-  slug: string;
-  titleKey: string;
-  excerptKey: string;
-  contentKey: string;
-  author: string;
-  publishedDate: string;
-  category: string;
-  readTime: number;
-  image?: string;
-  relatedServices?: { slugFr: string; titleKey: string }[];
+  relatedServices: { slugFr: string; titleKey: string }[];
 }
 
 export const blogPosts: BlogPost[] = [
@@ -45,7 +32,12 @@ export const blogPosts: BlogPost[] = [
     publishedDate: "2024-01-15",
     category: "Entretien Maison",
     readTime: 5,
-    image: homeRepairsImage
+    image: homeRepairsImage,
+    relatedServices: [
+      { slugFr: "electricien", titleKey: "services.electrician.title" },
+      { slugFr: "plombier", titleKey: "services.plumber.title" },
+      { slugFr: "peintre", titleKey: "services.painter.title" },
+    ]
   },
   {
     id: "2",
@@ -57,7 +49,10 @@ export const blogPosts: BlogPost[] = [
     publishedDate: "2024-01-20",
     category: "Services Professionnels",
     readTime: 6,
-    image: electricianImage
+    image: electricianImage,
+    relatedServices: [
+      { slugFr: "electricien", titleKey: "services.electrician.title" },
+    ]
   },
   {
     id: "3",
@@ -69,7 +64,11 @@ export const blogPosts: BlogPost[] = [
     publishedDate: "2024-01-25",
     category: "Vie Côtière",
     readTime: 7,
-    image: humidityImage
+    image: humidityImage,
+    relatedServices: [
+      { slugFr: "peintre", titleKey: "services.painter.title" },
+      { slugFr: "bricoleur", titleKey: "services.handyman.title" },
+    ]
   },
   {
     id: "4",
@@ -81,7 +80,10 @@ export const blogPosts: BlogPost[] = [
     publishedDate: "2024-02-01",
     category: "Entretien Maison",
     readTime: 6,
-    image: plumbingImage
+    image: plumbingImage,
+    relatedServices: [
+      { slugFr: "plombier", titleKey: "services.plumber.title" },
+    ]
   },
   {
     id: "5",
@@ -93,7 +95,10 @@ export const blogPosts: BlogPost[] = [
     publishedDate: "2024-02-10",
     category: "Services Professionnels",
     readTime: 7,
-    image: carpenterImage
+    image: carpenterImage,
+    relatedServices: [
+      { slugFr: "menuisier", titleKey: "services.carpenter.title" },
+    ]
   },
   {
     id: "6",
@@ -105,7 +110,11 @@ export const blogPosts: BlogPost[] = [
     publishedDate: "2024-02-15",
     category: "Climatisation",
     readTime: 6,
-    image: climatisationImage
+    image: climatisationImage,
+    relatedServices: [
+      { slugFr: "climatisation", titleKey: "services.airconditioning.title" },
+      { slugFr: "electricien", titleKey: "services.electrician.title" },
+    ]
   },
   {
     id: "7",
@@ -117,7 +126,10 @@ export const blogPosts: BlogPost[] = [
     publishedDate: "2024-02-20",
     category: "Jardinage",
     readTime: 5,
-    image: gardenImage
+    image: gardenImage,
+    relatedServices: [
+      { slugFr: "jardinage", titleKey: "services.gardening.title" },
+    ]
   },
   {
     id: "8",
@@ -129,6 +141,12 @@ export const blogPosts: BlogPost[] = [
     publishedDate: "2024-03-01",
     category: "Rénovation",
     readTime: 8,
-    image: renovationImage
+    image: renovationImage,
+    relatedServices: [
+      { slugFr: "macon", titleKey: "services.builder.title" },
+      { slugFr: "electricien", titleKey: "services.electrician.title" },
+      { slugFr: "plombier", titleKey: "services.plumber.title" },
+      { slugFr: "peintre", titleKey: "services.painter.title" },
+    ]
   }
 ];
