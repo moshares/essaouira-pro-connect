@@ -20,6 +20,20 @@ export interface BlogPost {
   image?: string;
 }
 
+export interface BlogPost {
+  id: string;
+  slug: string;
+  titleKey: string;
+  excerptKey: string;
+  contentKey: string;
+  author: string;
+  publishedDate: string;
+  category: string;
+  readTime: number;
+  image?: string;
+  relatedServices?: { slugFr: string; titleKey: string }[];
+}
+
 export const blogPosts: BlogPost[] = [
   {
     id: "1",
