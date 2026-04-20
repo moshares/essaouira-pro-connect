@@ -6,6 +6,10 @@ import carpenterImage from "@/assets/blog/carpenter-essaouira.jpg";
 import climatisationImage from "@/assets/blog/climatisation-essaouira.jpg";
 import gardenImage from "@/assets/blog/jardinage-essaouira.jpg";
 import renovationImage from "@/assets/blog/renovation-riad-essaouira.jpg";
+import prixImage from "@/assets/blog/prix-services-essaouira.jpg";
+import urgenceImage from "@/assets/blog/urgence-24h-essaouira.jpg";
+import pluiesImage from "@/assets/blog/saison-pluies-essaouira.jpg";
+import solaireImage from "@/assets/blog/solaire-essaouira.jpg";
 
 export interface BlogPost {
   id: string;
@@ -147,6 +151,74 @@ export const blogPosts: BlogPost[] = [
       { slugFr: "electricien", titleKey: "services.electrician.title" },
       { slugFr: "plombier", titleKey: "services.plumber.title" },
       { slugFr: "peintre", titleKey: "services.painter.title" },
+    ]
+  },
+  {
+    id: "9",
+    slug: "prix-services-bricolage-essaouira-tarifs",
+    titleKey: "blog.posts.prix.title",
+    excerptKey: "blog.posts.prix.excerpt",
+    contentKey: "blog.posts.prix.content",
+    author: "Essaouira Home Services",
+    publishedDate: "2024-03-10",
+    category: "Tarifs & Conseils",
+    readTime: 7,
+    image: prixImage,
+    relatedServices: [
+      { slugFr: "electricien", titleKey: "services.electrician.title" },
+      { slugFr: "plombier", titleKey: "services.plumber.title" },
+      { slugFr: "peintre", titleKey: "services.painter.title" },
+      { slugFr: "bricoleur", titleKey: "services.handyman.title" },
+    ]
+  },
+  {
+    id: "10",
+    slug: "urgence-plombier-electricien-essaouira-24h",
+    titleKey: "blog.posts.urgence.title",
+    excerptKey: "blog.posts.urgence.excerpt",
+    contentKey: "blog.posts.urgence.content",
+    author: "Essaouira Home Services",
+    publishedDate: "2024-03-15",
+    category: "Services d'Urgence",
+    readTime: 6,
+    image: urgenceImage,
+    relatedServices: [
+      { slugFr: "plombier", titleKey: "services.plumber.title" },
+      { slugFr: "electricien", titleKey: "services.electrician.title" },
+    ]
+  },
+  {
+    id: "11",
+    slug: "preparer-maison-saison-pluies-essaouira",
+    titleKey: "blog.posts.pluies.title",
+    excerptKey: "blog.posts.pluies.excerpt",
+    contentKey: "blog.posts.pluies.content",
+    author: "Essaouira Home Services",
+    publishedDate: "2024-03-20",
+    category: "Entretien Saisonnier",
+    readTime: 7,
+    image: pluiesImage,
+    relatedServices: [
+      { slugFr: "macon", titleKey: "services.builder.title" },
+      { slugFr: "plombier", titleKey: "services.plumber.title" },
+      { slugFr: "peintre", titleKey: "services.painter.title" },
+      { slugFr: "bricoleur", titleKey: "services.handyman.title" },
+    ]
+  },
+  {
+    id: "12",
+    slug: "installation-panneaux-solaires-essaouira-guide",
+    titleKey: "blog.posts.solaire.title",
+    excerptKey: "blog.posts.solaire.excerpt",
+    contentKey: "blog.posts.solaire.content",
+    author: "Essaouira Home Services",
+    publishedDate: "2024-03-25",
+    category: "Énergie Renouvelable",
+    readTime: 8,
+    image: solaireImage,
+    relatedServices: [
+      { slugFr: "solaire", titleKey: "services.solar.title" },
+      { slugFr: "electricien", titleKey: "services.electrician.title" },
     ]
   }
 ];
