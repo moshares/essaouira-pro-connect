@@ -106,9 +106,17 @@ const Footer = () => {
       <div className="border-t border-primary-foreground/10">
         <div className="container mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between text-xs text-primary-foreground/50">
           <p>© {new Date().getFullYear()} Essaouira Pro. Tous droits réservés.</p>
-          <div className="flex gap-4 mt-2 md:mt-0">
+          <div className="flex gap-4 mt-2 md:mt-0 items-center">
             <Link to="/demander-service" className="hover:text-primary transition-colors">Demander un service</Link>
             <Link to="/blog" className="hover:text-primary transition-colors">Blog</Link>
+            <a
+              href="https://agademy.site"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primary transition-colors"
+            >
+              Agadem creation
+            </a>
           </div>
         </div>
       </div>
