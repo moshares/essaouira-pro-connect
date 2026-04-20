@@ -112,10 +112,10 @@ const Footer = () => {
             <a
               href="https://agademy.site"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer nofollow"
               className="hover:text-primary transition-colors"
             >
-              Agadem creation
+              Agademy creation
             </a>
           </div>
         </div>
